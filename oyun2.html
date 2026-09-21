@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kasa Şifre Çözücü</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: #111827;
+            color: #f3f4f6;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            perspective: 1200px;
+        }
+        .kasa-kutu {
+            background: radial-gradient(circle, #1f2937, #111827);
+            border: 3px solid #f59e0b;
+            border-radius: 20px;
+            padding: 40px;
+            width: 460px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.9), inset 0 0 25px rgba(245,158,11,0.2);
+            transform: rotateX(4deg);
+        }
+        h2 { color: #f59e0b; margin-bottom: 5px; font-size: 22px; }
+        .kasa-gosterge {
+            background: #030712;
+            border: 2px inset #f59e0b;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-size: 32px;
+            color: #fbbf24;
+            letter-spacing: 5px;
+            box-shadow: inset 0 4px 10px rgba(0,0,0,0.8);
+        }
+        .tus-takimi {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .tus {
+            background: #374151;
+            color: #fff;
+            border: 1px solid #4b5563;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.1s;
+        }
+        .tus:hover { background: #f59e0b; color: #111827; }
+        .aksiyon-panel { display: flex; gap: 10px; }
+        .islem-btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn-sil { background: #991b1b; color: #fff; }
+        .btn-giris { background: #15803d; color: #fff; }
+        #kasaLog {
+            background: #030712;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #f59e0b;
+            font-size: 13px;
+            min-height: 45px;
+            text-align: left;
+        }
+        .geri-don { display: inline-block; margin-top: 20px; color: #9ca3af; text-decoration: none; font-size: 12px; }
+        .geri-don:hover { color: #f59e0b; }
+    </style>
+</head>
+<body>
+    <div class="kasa-kutu">
+        <h2>🔒 ÇELİK KASA KİLİDİ</h2>
+        <p style="color:#9ca3af; font-size:12px;">1 - 50 Arasında gizli şifreyi bul</p>
+
+        <div class="kasa-gosterge" id="ekranGirdi">_ _</div>
+
+        <div class="tus-takimi">
+            <button class="tus" onclick="tusBas(1)">1</button>
+            <button class="tus" onclick="tusBas(2)">2</button>
+            <button class="tus" onclick="tusBas(3)">3</button>
+            <button class="tus" onclick="tusBas(4)">4</button>
+            <button class="tus" onclick="tusBas(5)">5</button>
+            <button class="tus" onclick="tusBas(6)">6</button>
+            <button class="tus" onclick="tusBas(7)">7</button>
+            <button class="tus" onclick="tusBas(8)">8</button>
+            <button class="tus" onclick="tusBas(9)">9</button>
+            <button class="tus" onclick="tusBas(0)">0</button>
+        </div>
+
+        <div class="aksiyon-panel">
+            <button class="islem-btn btn-sil" onclick="temizle()">SİL</button>
+            <button class="islem-btn btn-giris" onclick="sifreDene()">AÇ / DENE</button>
+        </div>
+
+        <div id="kasaLog">> Kasa kilitli. Şifre girin...</div>
+        <a href="index.html" class="geri-don">← Ana Menüye Dön</a>
+    </div>
+
+    <script>
+        let gizliSifre = Math.floor(Math.random() * 50) + 1;
+        let girilenDeger = "";
+        let denemeSayisi = 0;
+
+        function tusBas(sayi) {
+            if(girilenDeger.length < 2) {
+                girilenDeger += sayi;
+                document.getElementById("ekranGirdi").innerText = girilenDeger;
+            }
+        }
+
+        function temizle() {
+            girilenDeger = "";
+            document.getElementById("ekranGirdi").innerText = "_ _";
+        }
+
+        function sifreDene() {
+            if(!girilenDeger) return;
+            let tahmin = Number(girilenDeger);
+            denemeSayisi++;
+            let log = document.getElementById("kasaLog");
+
+            if(tahmin === gizliSifre) {
+                log.innerHTML = `🎉 <span style="color:#4ade80">KASA AÇILDI!</span> Doğru şifre ${gizliSifre} idi (${denemeSayisi}. deneme).`;
+                gizliSifre = Math.floor(Math.random() * 50) + 1;
+                denemeSayisi = 0;
+            } else if(tahmin > gizliSifre) {
+                log.innerHTML = `⚠️ [${denemeSayisi}. Deneme: ${tahmin}] -> ÇOK YÜKSEK! Şifreyi aşağı çek.`;
+            } else {
+                log.innerHTML = `⚠️ [${denemeSayisi}. Deneme: ${tahmin}] -> ÇOK DÜŞÜK! Şifreyi yukarı çıkar.`;
+            }
+            temizle();
+        }
+    </script>
+</body>
+</html>
