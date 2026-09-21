@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <!-- UYUMLULUK İLKESİ: Mobil cihazlarda düzgün görünüm sağlar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favori Filmim: Interstellar</title>
+    
+    <!-- CSS Kodlarını Doğrudan HTML İçine Gömüyoruz (Internal CSS) -->
+    <style>
+        /* --- INTERSTELLAR SİNEMATİK STİLİ --- */
+
+        body {
+            background-image: url('resimler/uzay_arkaplan.jpg');
+            background-color: #000;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Georgia', serif; 
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        .site-cercevesi {
+            background: rgba(10, 15, 20, 0.7); 
+            backdrop-filter: blur(10px);
+            max-width: 850px;
+            margin: 30px auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8), 0 0 15px rgba(70, 190, 230, 0.2);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .baslik-alani {
+            background: transparent;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 1px solid rgba(70, 190, 230, 0.3);
+        }
+
+        .baslik-alani h1 {
+            color: #f1d302; 
+            font-size: 48px;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(241, 211, 2, 0.5);
+        }
+
+        .baslik-alani p {
+            color: #a7b6c2;
+            font-size: 18px;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .icerik-alani {
+            padding: 40px;
+        }
+
+        .icerik-alani h2 {
+            color: #46bee6;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .icerik-alani p {
+            margin-bottom: 20px;
+        }
+
+        .icerik-alani img {
+            width: 100%;
+            border: 4px solid #1f2833;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
+            margin-top: 20px;
+            mix-blend-mode: luminosity; 
+            opacity: 0.9;
+            transition: 0.5s;
+        }
+
+        .icerik-alani img:hover {
+            opacity: 1;
+            mix-blend-mode: normal;
+            border-color: #46bee6;
+        }
+
+        .buton {
+            background-color: #46bee6; 
+            color: #0b0c10;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(70, 190, 230, 0.4);
+        }
+
+        .buton:hover {
+            background-color: #f1d302;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(241, 211, 2, 0.6);
+        }
+
+        .alt-bilgi {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #5c6b79;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="site-cercevesi">
+        
+        <!-- BAŞLIK ALANI -->
+        <div class="baslik-alani">
+            <h1>Interstellar (Yıldızlararası)</h1>
+            <p>Bilimkurgu ve sinema tarihini değiştiren bir başyapıt.</p>
+        </div>
+
+        <!-- İÇERİK ALANI -->
+        <div class="icerik-alani">
+            <h2>Neden Bu Filmi Çok Sevmelisiniz?</h2>
+            <p>Interstellar; uzay boşluğu, zaman bükülmesi, insan sevgisi ve fedakarlık temalarını muazzam bir görsel ve işitsel şölenle anlatır. Hans Zimmer'in unutulmaz müzikleriyle izleyiciyi adeta başka bir boyuta taşır.</p>
+            
+            <img src="resimler/afis.jpg" alt="Interstellar Film Afişi">
+
+            <!-- İŞLEVSELLİK İLKESİ: Fragman veya detay için buton -->
+            <div style="text-align: center; margin-top: 25px;">
+                <a href="https://www.imdb.com/title/tt0816692/" target="_blank" class="buton">IMDb'de İncele</a>
+            </div>
+        </div>
+
+        <!-- ALT BİLGİ (FOOTER) -->
+        <div class="alt-bilgi">
+            <!-- GÜNCELLİK VE GÜVENİLİRLİK İLKESİ -->
+            <p>Tasarımcı: Okbi | Son Güncelleme: 21 Eylül 2026</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

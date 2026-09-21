@@ -1,122 +1,116 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Okbi - Portfolyo</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            background-color: #080504;
-            color: #d7ccc8;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow: hidden;
-        }
-        .container {
-            background: linear-gradient(145deg, #160c08, #0a0403);
-            border: 1px solid #ff572255;
-            border-radius: 24px;
-            padding: 45px;
-            width: 480px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.9), 0 0 30px rgba(255,87,34,0.1);
-            text-align: center;
-        }
-        h1 {
-            color: #ff5722;
-            font-size: 36px;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-            text-shadow: 0 0 15px rgba(255,87,34,0.4);
-        }
-        .subtitle {
-            color: #8d6e63;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
-        }
-        .section-title {
-            color: #ff8a65;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-align: left;
-            margin-bottom: 12px;
-            border-left: 3px solid #ff5722;
-            padding-left: 8px;
-        }
-        .social-box {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-        .social-btn {
-            flex: 1;
-            padding: 12px;
-            background: #1f100a;
-            color: #ff8a65;
-            border: 1px solid #ff572244;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-        .social-btn:hover {
-            background: #ff5722;
-            color: #080504;
-            box-shadow: 0 0 20px rgba(255,87,34,0.6);
-            transform: translateY(-2px);
-        }
-        .game-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .game-btn {
-            background: #1a0c07;
-            color: #ffccbc;
-            border: 1px solid #ff572266;
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 15px;
-            font-weight: 600;
-            text-decoration: none;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: all 0.3s ease;
-        }
-        .game-btn span { font-size: 12px; color: #ff5722; }
-        .game-btn:hover {
-            background: #2b120a;
-            border-color: #ff5722;
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(255,87,34,0.2);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OKBI | Portfolyo</title>
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body>
-    <div class="container">
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <span class="eyebrow">Digital Creator</span>
         <h1>OKBI</h1>
-        <div class="subtitle">Digital Creator & Developer</div>
-        
-        <div class="section-title">Projelerime Bakın</div>
-        <div class="social-box">
-            <a href="https://github.com/Muhammedokbi" class="social-btn" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/muhammedokbi/" class="social-btn" target="_blank">LinkedIn</a>
-        </div>
+      </div>
 
-        <div class="section-title">Arcade Oyun Merkezi</div>
-        <div class="game-list">
-            <a href="oyun1.html" class="game-btn">🕹️ 1. Taş - Kağıt - Makas <span>OYNA →</span></a>
-            <a href="oyun2.html" class="game-btn">🎯 2. Sayı Tahmin Simülasyonu <span>OYNA →</span></a>
-            <a href="oyun3.html" class="game-btn" style="border-color: #4caf50; color: #a5d6a7;">🧟 3. The Last Stand (TLOU Tarzı) <span>HAYATTA KAL →</span></a>
+      <nav class="top-nav" aria-label="Ana menü">
+        <a class="nav-link" href="#projeler">Projeler</a>
+        <a class="nav-link" href="2.hafta/filim.html">Film Sitesi</a>
+        <a class="nav-link" href="mars_projesi/index.html">Mars Projesi</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="intro-card">
+        <h2>Güçlü fikirler, net tasarım ve akıllı çalıştayla ortaya çıkar.</h2>
+        <p>
+          Ben Muhammed Okbi. Web tasarımı, oyun geliştirme ve interaktif deneyimler üzerine çalışıyorum.
+          Aşağıdaki projeler, hem estetik hem de kullanıcı odaklı düşünce yapısıyla hazırlanmıştır.
+        </p>
+      </section>
+
+      <section class="list-panel" id="projeler">
+        <div class="section-header">1.hafta - Oyun Projelerim</div>
+
+        <div class="project-list">
+          <a class="project-card" href="1.hafta/oyun1.html">
+            <div class="emoji">🕹️</div>
+            <div>
+              <strong>1. Taş - Kağıt - Makas</strong>
+              <small>Basit ama eğlenceli rekabetçi oyun.</small>
+            </div>
+            <div class="cta">OYNA →</div>
+          </a>
+
+          <a class="project-card" href="1.hafta/oyun2.html">
+            <div class="emoji">🎯</div>
+            <div>
+              <strong>2. Sayı Tahmin Simülasyonu</strong>
+              <small>Gizli sayı bulma ve stratejik düşünme deneyimi.</small>
+            </div>
+            <div class="cta">OYNA →</div>
+          </a>
+
+          <a class="project-card highlight" href="1.hafta/oyun3.html">
+            <div class="emoji">🧟</div>
+            <div>
+              <strong>3. The Last Stand</strong>
+              <small>Hayatta kalma temasıyla geliştirilen zombi sahnesi.</small>
+            </div>
+            <div class="cta">HAYATTA KAL →</div>
+          </a>
         </div>
-    </div>
+      </section>
+
+      <section class="list-panel">
+        <div class="section-header">2.hafta - Film ve Mars Projem</div>
+
+        <div class="project-list">
+          <a class="project-card" href="2.hafta/filim.html">
+            <div class="emoji">🎬</div>
+            <div>
+              <strong>Film Sitesi</strong>
+              <small>Uzay temalı sinema ve görsel deneyimi.</small>
+            </div>
+            <div class="cta">AÇ →</div>
+          </a>
+
+          <a class="project-card" href="mars_projesi/index.html">
+            <div class="emoji">🚀</div>
+            <div>
+              <strong>Mars Kolonisi</strong>
+              <small>Gerçek Mars yolculuğu hissi veren deneyim.</small>
+            </div>
+            <div class="cta">GİT →</div>
+          </a>
+        </div>
+      </section>
+
+      <section class="list-panel">
+        <div class="section-header">Film ve görsel içerik</div>
+
+        <div class="film-grid">
+          <img class="film-poster" src="resimler/afis.jpg" alt="Interstellar film afişi">
+          <div class="film-copy">
+            <h3>Interstellar Film Sitesi</h3>
+            <p>
+              Uzay teması ve sinema atmosferi bir arada. Daha sade bir düzenle, proje stilleri daha net ve okunaklı hale getirildi.
+            </p>
+            <div class="film-actions">
+              <a class="primary-btn" href="2.hafta/filim.html">Film Sitesini Aç</a>
+              <a class="secondary-btn" href="https://www.imdb.com/title/tt0816692/" target="_blank">IMDb</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> OKBI | Tüm hakları saklıdır.
+    </footer>
+  </div>
+
+  <script src="js/portfolio.js"></script>
 </body>
 </html>

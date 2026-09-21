@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Control | Interstellar</title>
+    <style>
+        :root {
+            --bg: #060b14;
+            --bg-2: #101827;
+            --panel: rgba(12, 18, 30, 0.82);
+            --panel-strong: rgba(17, 24, 39, 0.96);
+            --line: rgba(255, 160, 96, 0.35);
+            --orange: #ff7b3d;
+            --red: #ff4d4d;
+            --amber: #ffd27a;
+            --cyan: #7fd3ff;
+            --text: #f5f1ec;
+            --muted: #d5c9bf;
+            --shadow: rgba(0, 0, 0, 0.58);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top, rgba(255, 128, 61, 0.16), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(78, 148, 255, 0.12), transparent 24%),
+                linear-gradient(135deg, var(--bg) 0%, var(--bg-2) 48%, #090d14 100%);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.9), transparent 100%),
+                radial-gradient(2px 2px at 65% 24%, rgba(255,255,255,0.8), transparent 100%),
+                radial-gradient(2px 2px at 78% 72%, rgba(255,255,255,0.82), transparent 100%),
+                radial-gradient(2px 2px at 42% 80%, rgba(255,255,255,0.75), transparent 100%),
+                radial-gradient(2px 2px at 57% 48%, rgba(255,255,255,0.7), transparent 100%);
+            background-repeat: repeat;
+            background-size: 320px 240px;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        .site-cercevesi {
+            position: relative;
+            z-index: 1;
+            max-width: 1120px;
+            margin: 28px auto;
+            border-radius: 30px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 153, 106, 0.3);
+            background: rgba(12, 16, 24, 0.8);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 30px 90px var(--shadow), 0 0 25px rgba(255, 122, 79, 0.12);
+        }
+
+        .baslik-alani {
+            padding: 40px 36px 24px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            background: linear-gradient(180deg, rgba(22, 29, 41, 0.9), rgba(9, 13, 20, 0.2));
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 11px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--amber);
+            background: rgba(255, 145, 77, 0.08);
+            border: 1px solid rgba(255, 145, 77, 0.25);
+            margin-bottom: 18px;
+        }
+
+        .baslik-alani h1 {
+            margin: 0;
+            font-size: clamp(2.3rem, 4.5vw, 4.3rem);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffe2a5;
+            text-shadow: 0 0 18px rgba(255, 163, 94, 0.28);
+        }
+
+        .baslik-alani p {
+            margin: 12px 0 0;
+            color: var(--muted);
+            font-size: 1.05rem;
+            letter-spacing: 0.06em;
+        }
+
+        .icerik-alani {
+            padding: 36px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 34px;
+            align-items: center;
+        }
+
+        .poster-frame {
+            position: relative;
+            padding: 12px;
+            border-radius: 26px;
+            background: linear-gradient(135deg, rgba(33, 43, 63, 0.9), rgba(12, 16, 24, 0.95));
+            border: 1px solid rgba(255, 160, 96, 0.35);
+            box-shadow: 0 24px 70px rgba(0,0,0,0.55), inset 0 0 30px rgba(255, 137, 77, 0.08);
+            transform: perspective(1200px) rotateX(4deg) rotateY(-10deg);
+        }
+
+        .poster-frame::before {
+            content: "";
+            position: absolute;
+            inset: 16px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+        }
+
+        .icerik-alani img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            object-fit: cover;
+            border-radius: 18px;
+            filter: saturate(1.15) contrast(1.08) brightness(0.96);
+            box-shadow: inset 0 0 28px rgba(0,0,0,0.55);
+            transition: transform 0.35s ease, filter 0.35s ease;
+        }
+
+        .poster-frame:hover img {
+            transform: scale(1.02);
+            filter: saturate(1.35) contrast(1.12) brightness(1);
+        }
+
+        .content-box h2 {
+            margin: 0 0 14px;
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            color: var(--cyan);
+            letter-spacing: 0.06em;
+        }
+
+        .content-box p {
+            margin: 0 0 20px;
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 1.02rem;
+        }
+
+        .feature-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0 26px;
+        }
+
+        .chip {
+            padding: 9px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(127, 211, 255, 0.28);
+            background: rgba(127, 211, 255, 0.06);
+            color: var(--text);
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .stat-box {
+            padding: 18px 16px;
+            border: 1px solid rgba(255, 162, 98, 0.28);
+            border-radius: 16px;
+            background: rgba(255,255,255,0.02);
+            text-align: center;
+        }
+
+        .stat-box span {
+            display: block;
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #c8b8ab;
+            margin-bottom: 8px;
+        }
+
+        .stat-box strong {
+            color: var(--amber);
+            font-size: 1.4rem;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .buton,
+        .buton-ghost {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 180px;
+            padding: 15px 24px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+            cursor: pointer;
+        }
+
+        .buton {
+            color: #fffaf3;
+            background: linear-gradient(135deg, var(--red), var(--orange));
+            box-shadow: 0 16px 30px rgba(255, 94, 67, 0.26);
+        }
+
+        .buton-ghost {
+            color: var(--text);
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255, 161, 102, 0.4);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+
+        .buton:hover,
+        .buton-ghost:hover {
+            transform: translateY(-3px) scale(1.01);
+        }
+
+        .buton:hover {
+            box-shadow: 0 18px 35px rgba(255, 92, 61, 0.35);
+        }
+
+        .buton-ghost:hover {
+            border-color: rgba(255, 181, 106, 0.92);
+            background: rgba(255, 130, 72, 0.06);
+        }
+
+        .alt-bilgi {
+            padding: 18px 24px 30px;
+            text-align: center;
+            color: #a5b1c0;
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            background: rgba(7, 11, 17, 0.35);
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .poster-frame {
+                transform: none;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .baslik-alani,
+            .icerik-alani {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-row {
+                flex-direction: column;
+            }
+
+            .buton,
+            .buton-ghost {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="site-cercevesi">
+        <div class="baslik-alani">
+            <span class="eyebrow">Mission Control</span>
+            <h1>Interstellar</h1>
+            <p>Uzay, zaman ve insan ruhunun en büyük yolculuğu.</p>
+        </div>
+
+        <div class="icerik-alani">
+            <div class="hero-grid">
+                <div class="poster-frame">
+                    <img src="resimler/afis.jpg" alt="Interstellar film afişi">
+                </div>
+
+                <div class="content-box">
+                    <h2>Why This Movie Hits So Hard</h2>
+                    <p>Interstellar; bilim kurgu, kalp kırıklığı, cesaret ve fedakârlık duygularını kusursuz bir görsel anlatımla birleştirir. Her kare, insanın gökyüzüne bakma biçimini değiştirir. Hans Zimmer’in muazzam müzikleriyle birlikte izleyici, yalnızca bir film değil, bir çağ açan deneyim yaşar.</p>
+
+                    <div class="feature-row">
+                        <span class="chip">Sci-Fi</span>
+                        <span class="chip">Drama</span>
+                        <span class="chip">Space Epic</span>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span>Yıl</span>
+                            <strong>2014</strong>
+                        </div>
+                        <div class="stat-box">
+                            <span>Süre</span>
+                            <strong>169 dk</strong>
+                        </div>
+                        <div class="stat-box">
+                            <span>Tür</span>
+                            <strong>Bilimkurgu</strong>
+                        </div>
+                    </div>
+
+                    <div class="cta-row">
+                        <a href="https://www.imdb.com/title/tt0816692/" target="_blank" class="buton">IMDb'de İncele</a>
+                        <a href="../index.html" class="buton-ghost">Ana Siteye Git</a>
+                        <a href="../mars_projesi/index.html" class="buton-ghost">Mars Projesi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alt-bilgi">
+            Tasarımcı: Okbi | Mission Console // 21 Eylül 2026
+        </div>
+    </div>
+
+</body>
+</html>
