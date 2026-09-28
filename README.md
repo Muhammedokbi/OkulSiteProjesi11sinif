@@ -1,4 +1,4 @@
-# OKBI Portfolio Site
+# OKBI Portfolio Site [Sitem Okbi](http://okbi.lovestoblog.com/)
 
 Bu proje, öğrencilik dönemi için hazırladığım portföy sitesidir. Web tasarımı, oyun geliştirme ve interaktif proje çalışmaları bir arada gösterilir.
 

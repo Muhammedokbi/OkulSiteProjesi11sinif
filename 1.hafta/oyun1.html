@@ -2,139 +2,424 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Masada Düello - Taş Kağıt Makas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Arena | Taş Kağıt Makas</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #070b12;
+            --bg-2: #101722;
+            --panel: rgba(18, 25, 36, 0.9);
+            --panel-strong: rgba(12, 16, 23, 0.96);
+            --line: rgba(255, 145, 77, 0.42);
+            --orange: #ff8a3d;
+            --red: #ff564f;
+            --amber: #ffd06b;
+            --cyan: #7ed3ff;
+            --text: #f4efe7;
+            --muted: #c7c0b6;
+            --shadow: rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            background: #0f172a;
-            color: #f8fafc;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
-            perspective: 1200px;
+            display: grid;
+            place-items: center;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top, rgba(255, 138, 61, 0.18), transparent 30%),
+                radial-gradient(circle at bottom, rgba(126, 211, 255, 0.08), transparent 22%),
+                linear-gradient(140deg, var(--bg) 0%, var(--bg-2) 55%, #0c0f14 100%);
+            padding: 30px 16px;
         }
-        .masa-sahnesi {
-            background: linear-gradient(145deg, #1e293b, #0f172a);
-            border: 2px solid #38bdf8;
-            border-radius: 24px;
-            padding: 40px;
-            width: 500px;
-            text-align: center;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.8), inset 0 0 20px rgba(56,189,248,0.2);
-            transform: rotateX(5deg);
+
+        .arena {
+            width: min(920px, 100%);
+            background: rgba(11, 15, 22, 0.9);
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            padding: 26px 22px 18px;
+            box-shadow: 0 26px 80px rgba(0,0,0,0.68), 0 0 25px rgba(255, 139, 61, 0.12);
+            transform: perspective(1200px) rotateX(4deg);
         }
-        h2 { color: #38bdf8; margin-bottom: 5px; font-size: 22px; letter-spacing: 1px; }
-        .masa-ustu {
+
+        .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #090d16;
-            padding: 20px;
-            border-radius: 16px;
-            margin: 25px 0;
-            border: 1px solid rgba(255,255,255,0.05);
+            gap: 22px;
+            margin-bottom: 22px;
         }
-        .oyuncu-koltuk {
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .eyebrow {
+            font-size: 10px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--amber);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--orange);
+            text-shadow: 0 0 12px rgba(255, 138, 61, 0.18);
+        }
+
+        .scoreboard {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .score-box {
+            min-width: 110px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255, 145, 77, 0.3);
             text-align: center;
-            width: 45%;
         }
-        .oyuncu-koltuk h4 { color: #94a3b8; font-size: 13px; margin-bottom: 8px; }
-        .avatar-kutu {
-            background: #1e293b;
-            border: 2px solid #475569;
-            border-radius: 12px;
-            padding: 15px;
-            font-size: 28px;
-            min-height: 70px;
+
+        .score-box span {
+            display: block;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .score-box strong {
+            font-size: 1.7rem;
+            color: var(--amber);
+        }
+
+        .battle-area {
+            display: grid;
+            grid-template-columns: 1fr 120px 1fr;
+            gap: 18px;
+            align-items: center;
+            background: linear-gradient(180deg, rgba(18, 24, 34, 0.9), rgba(7, 10, 15, 0.96));
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 26px;
+            padding: 22px 18px;
+            margin-bottom: 18px;
+        }
+
+        .fighter {
+            position: relative;
+            padding: 18px 14px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 150, 92, 0.25);
+            background: rgba(255,255,255,0.02);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+        }
+
+        .fighter h3 {
+            color: var(--muted);
+            font-size: 0.8rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .avatar {
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: inset 0 4px 6px rgba(0,0,0,0.5);
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 14px;
+            border-radius: 22px;
+            font-size: 3.2rem;
+            background: linear-gradient(135deg, rgba(255, 140, 80, 0.12), rgba(126, 211, 255, 0.08));
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: inset 0 8px 18px rgba(255,255,255,0.03), 0 10px 22px rgba(0,0,0,0.28);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
-        .vs-text { font-weight: bold; color: #f43f5e; font-size: 18px; }
-        .kontrol-paneli { display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; }
-        .hamle-btn {
-            background: #1e293b;
-            color: #38bdf8;
-            border: 2px solid #38bdf8;
-            padding: 12px 16px;
-            border-radius: 10px;
+
+        .fighter.win .avatar {
+            box-shadow: 0 0 25px rgba(255, 161, 89, 0.32);
+            transform: translateY(-4px) scale(1.02);
+        }
+
+        .fighter.lose .avatar {
+            box-shadow: 0 0 20px rgba(255, 86, 79, 0.34);
+        }
+
+        .choice-tag {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.09);
+            color: var(--text);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .versus {
+            display: grid;
+            place-items: center;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--red);
+            text-shadow: 0 0 18px rgba(255, 86, 79, 0.5);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .move-btn {
+            border: 1px solid rgba(255, 145, 77, 0.4);
+            background: linear-gradient(180deg, rgba(18, 24, 34, 0.96), rgba(13, 18, 25, 0.96));
+            color: var(--text);
+            border-radius: 16px;
+            padding: 18px 16px;
+            min-width: 150px;
             cursor: pointer;
-            font-weight: bold;
-            transition: all 0.2s;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            box-shadow: 0 12px 18px rgba(0,0,0,0.2);
         }
-        .hamle-btn:hover {
-            background: #38bdf8;
-            color: #0f172a;
-            transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(56,189,248,0.4);
+
+        .move-btn:hover {
+            transform: translateY(-4px) scale(1.02);
+            border-color: rgba(255, 168, 96, 0.85);
+            box-shadow: 0 18px 30px rgba(255, 140, 80, 0.18);
         }
-        #durumMesaji {
-            background: #090d16;
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 4px solid #38bdf8;
-            font-size: 14px;
-            min-height: 50px;
+
+        .move-btn strong {
+            display: block;
+            font-size: 1.2rem;
+            margin-top: 10px;
         }
-        .geri-don { display: inline-block; margin-top: 20px; color: #94a3b8; text-decoration: none; font-size: 13px; }
-        .geri-don:hover { color: #38bdf8; }
+
+        .move-emoji {
+            font-size: 2.1rem;
+        }
+
+        .status-panel {
+            background: linear-gradient(180deg, rgba(16, 23, 29, 0.95), rgba(10, 14, 20, 1));
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 18px;
+            padding: 18px 20px;
+            min-height: 92px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--muted);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .status-panel strong {
+            color: var(--amber);
+        }
+
+        .footer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-top: 18px;
+        }
+
+        .back-link {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--orange);
+        }
+
+        @media (max-width: 760px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .scoreboard {
+                justify-content: flex-start;
+            }
+
+            .battle-area {
+                grid-template-columns: 1fr;
+            }
+
+            .versus {
+                transform: rotate(90deg);
+            }
+
+            .move-btn {
+                flex: 1 1 120px;
+            }
+
+            .footer-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="masa-sahnesi">
-        <h2>MASADA DÜELLO</h2>
-        <p style="color:#64748b; font-size:12px;">Karşılıklı Oturan Oyuncu vs Yapay Zeka</p>
-
-        <div class="masa-ustu">
-            <div class="oyuncu-koltuk">
-                <h4>SEN (Oyuncu)</h4>
-                <div class="avatar-kutu" id="userAvatar">❔</div>
+    <div class="arena">
+        <div class="header">
+            <div class="brand">
+                <span class="eyebrow">Arena Challenge</span>
+                <h1>Rock</h1>
             </div>
-            <div class="vs-text">VS</div>
-            <div class="oyuncu-koltuk">
-                <h4>RAKİP (AI)</h4>
-                <div class="avatar-kutu" id="pcAvatar">❔</div>
+
+            <div class="scoreboard">
+                <div class="score-box">
+                    <span>Sen</span>
+                    <strong id="playerScore">0</strong>
+                </div>
+                <div class="score-box">
+                    <span>Rakip</span>
+                    <strong id="botScore">0</strong>
+                </div>
+                <div class="score-box">
+                    <span>Beraberlik</span>
+                    <strong id="drawScore">0</strong>
+                </div>
             </div>
         </div>
 
-        <div class="kontrol-paneli">
-            <button class="hamle-btn" onclick="hamleYap('Taş')">✊ Taş</button>
-            <button class="hamle-btn" onclick="hamleYap('Kağıt')">✋ Kağıt</button>
-            <button class="hamle-btn" onclick="hamleYap('Makas')">✌️ Makas</button>
+        <div class="battle-area">
+            <div class="fighter" id="playerCard">
+                <h3>Sen</h3>
+                <div class="avatar" id="userAvatar">❔</div>
+                <span class="choice-tag" id="playerChoice">Bekleniyor</span>
+            </div>
+
+            <div class="versus">VS</div>
+
+            <div class="fighter" id="botCard">
+                <h3>Rakip</h3>
+                <div class="avatar" id="botAvatar">❔</div>
+                <span class="choice-tag" id="botChoice">Bekleniyor</span>
+            </div>
         </div>
 
-        <div id="durumMesaji">Masa kuruldu. Hamleni seç ve masaya vur!</div>
-        <a href="index.html" class="geri-don">← Ana Menüye Dön</a>
+        <div class="controls">
+            <button class="move-btn" data-choice="Taş" onclick="hamleYap('Taş')">
+                <span class="move-emoji">✊</span>
+                <strong>Taş</strong>
+            </button>
+            <button class="move-btn" data-choice="Kağıt" onclick="hamleYap('Kağıt')">
+                <span class="move-emoji">✋</span>
+                <strong>Kağıt</strong>
+            </button>
+            <button class="move-btn" data-choice="Makas" onclick="hamleYap('Makas')">
+                <span class="move-emoji">✌️</span>
+                <strong>Makas</strong>
+            </button>
+        </div>
+
+        <div class="status-panel" id="statusPanel">
+            <div><strong>İlk hamleni seç.</strong><br>Rakibin hamlesi sana karşı gelecek.</div>
+        </div>
+
+        <div class="footer-row">
+            <div></div>
+            <a href="index.html" class="back-link">← Ana Menüye Dön</a>
+        </div>
     </div>
 
     <script>
-        const semboller = { "Taş": "✊ Taş", "Kağıt": "✋ Kağıt", "Makas": "✌️ Makas" };
+        const choices = {
+            Taş: { emoji: '✊', label: 'Taş' },
+            Kağıt: { emoji: '✋', label: 'Kağıt' },
+            Makas: { emoji: '✌️', label: 'Makas' }
+        };
 
-        function hamleYap(userSecim) {
-            let secenekler = ["Taş", "Kağıt", "Makas"];
-            let pcSecim = secenekler[Math.floor(Math.random() * 3)];
+        let scores = {
+            player: 0,
+            bot: 0,
+            draw: 0
+        };
 
-            document.getElementById("userAvatar").innerHTML = semboller[userSecim];
-            document.getElementById("pcAvatar").innerHTML = semboller[pcSecim];
+        function updateScoreboard() {
+            document.getElementById('playerScore').textContent = scores.player;
+            document.getElementById('botScore').textContent = scores.bot;
+            document.getElementById('drawScore').textContent = scores.draw;
+        }
 
-            let mesaj = "";
-            if (userSecim === pcSecim) {
-                mesaj = `🤝 <b>Masa Tokalaştı!</b> İkiniz de ${userSecim} seçtiniz, berabere.`;
+        function setCardState(playerWin, botWin) {
+            const playerCard = document.getElementById('playerCard');
+            const botCard = document.getElementById('botCard');
+            playerCard.classList.remove('win', 'lose');
+            botCard.classList.remove('win', 'lose');
+
+            if (playerWin) {
+                playerCard.classList.add('win');
+            } else if (botWin) {
+                botCard.classList.add('win');
+            }
+        }
+
+        function hamleYap(userChoice) {
+            const options = ['Taş', 'Kağıt', 'Makas'];
+            const botChoice = options[Math.floor(Math.random() * options.length)];
+
+            document.getElementById('userAvatar').textContent = choices[userChoice].emoji;
+            document.getElementById('botAvatar').textContent = choices[botChoice].emoji;
+            document.getElementById('playerChoice').textContent = choices[userChoice].label;
+            document.getElementById('botChoice').textContent = choices[botChoice].label;
+
+            let message = '';
+            let playerWin = false;
+            let botWin = false;
+
+            if (userChoice === botChoice) {
+                scores.draw += 1;
+                message = 'Berabere! <strong>İkisi de aynı hamleyi seçti.</strong>';
+                setCardState(false, false);
             } else if (
-                (userSecim === "Taş" && pcSecim === "Makas") ||
-                (userSecim === "Kağıt" && pcSecim === "Taş") ||
-                (userSecim === "Makas" && pcSecim === "Kağıt")
+                (userChoice === 'Taş' && botChoice === 'Makas') ||
+                (userChoice === 'Kağıt' && botChoice === 'Taş') ||
+                (userChoice === 'Makas' && botChoice === 'Kağıt')
             ) {
-                mesaj = `🎉 <span style="color:#34d399">Masayı Yendin!</span> ${userSecim}, rakibin ${pcSecim} hamlesini ezdi.`;
+                scores.player += 1;
+                message = 'Sen kazandın! <strong>Bu tur seni daha güçlü kıldı.</strong>';
+                playerWin = true;
+                setCardState(true, false);
             } else {
-                mesaj = `💥 <span style="color:#f43f5e">Masada Kaybettin!</span> Rakibin ${pcSecim} hamlesi seni alt etti.`;
+                scores.bot += 1;
+                message = 'Rakip kazandı! <strong>Bir sonraki turu yeniden kur.</strong>';
+                botWin = true;
+                setCardState(false, true);
             }
 
-            document.getElementById("durumMesaji").innerHTML = mesaj;
+            document.getElementById('statusPanel').innerHTML = `<div>${message}</div>`;
+            updateScoreboard();
         }
+
+        updateScoreboard();
     </script>
 </body>
 </html>
