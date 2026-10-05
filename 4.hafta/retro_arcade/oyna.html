@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#11091e">
+  <title>Arcade Oyun Alanı</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="oyun.css">
+</head>
+<body class="oyun-sayfasi">
+  <header class="site-header"><a class="brand" href="index.html">ARCADE<span> SALONU</span></a><a class="geri-link" href="index.html">← OYUN LİSTESİ</a></header>
+  <main class="game-wrap"><p class="eyebrow">ARCADE CABINET · PLAYER 1</p><h1 id="game-title">OYUN</h1><p id="game-help" class="game-help"></p>
+    <div class="game-frame"><canvas id="game" width="600" height="480" aria-label="Oyun alanı"></canvas></div>
+    <div class="game-status"><span id="score">SKOR 000000</span><span id="message" aria-live="polite">OYUN BAŞLADI</span><button id="restart" type="button">YENİDEN BAŞLAT</button></div>
+    <div class="touch-pad" aria-label="Dokunmatik kontroller"><button data-key="ArrowLeft" aria-label="Sola git">←</button><button data-key="ArrowUp" aria-label="Yukarı git">↑</button><button data-key="ArrowDown" aria-label="Aşağı git">↓</button><button data-key="ArrowRight" aria-label="Sağa git">→</button><button data-key="Space" aria-label="Zıpla veya ateş et">A</button></div>
+  </main><script src="oyun.js"></script>
+</body></html>

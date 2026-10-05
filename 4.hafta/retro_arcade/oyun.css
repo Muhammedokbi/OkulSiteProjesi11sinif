@@ -1,0 +1,13 @@
+.oyun-sayfasi { min-height:100vh; }
+.geri-link { color:var(--cyan); font:9px 'Press Start 2P',monospace; text-decoration:none; }
+.game-wrap { width:min(760px,calc(100% - 32px)); margin:40px auto 60px; text-align:center; }
+.game-wrap h1 { color:var(--pink); font:clamp(20px,4vw,30px) 'Press Start 2P',monospace; line-height:1.6; }
+.game-help { color:var(--muted); font-size:14px; }
+.game-frame { margin:24px auto 0; padding:10px; border:1px solid #36e7ff77; border-radius:10px; background:#090511; box-shadow:0 0 35px #36e7ff18; }
+#game { display:block; width:100%; height:auto; image-rendering:pixelated; background:#080713; }
+.game-status { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:12px; color:var(--cyan); font:8px 'Press Start 2P',monospace; line-height:1.8; }
+.game-status button,.touch-pad button { padding:10px 12px; border:1px solid #36e7ff88; border-radius:5px; background:#1d1230; color:var(--cyan); font:8px 'Press Start 2P',monospace; cursor:pointer; }
+.game-status button:hover,.touch-pad button:hover { background:var(--cyan); color:#11091e; }
+.touch-pad { display:none; grid-template-columns:repeat(5,48px); justify-content:center; gap:8px; margin-top:18px; }
+.touch-pad button { min-height:44px; font:18px Inter,sans-serif; touch-action:manipulation; }
+@media(max-width:620px) { .site-header { flex-direction:row; align-items:center; } .game-wrap { margin-top:28px; } .game-status { flex-wrap:wrap; justify-content:center; } .touch-pad { display:grid; } }
