@@ -1,49 +1,57 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Süper Kahraman Akademisi | Ana Sayfa</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b15">
+  <meta name="description" content="Süper Kahraman Akademisi'ne katıl, güçlerini geliştir ve dünyayı korumaya hazırlan.">
+  <title>Süper Kahraman Akademisi — Dünyayı Korumaya Hazır mısın?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
 </head>
-<body>
-    <!-- 1. SİTE ÜST BİLGİSİ VE MENÜ -->
-    <header>
-        <h1>SÜPER KAHRAMAN AKADEMİSİ</h1>
-        <nav>
-            <a href="index.html">Akademi Merkezi</a>
-            <a href="kadro.html">Aktif Kadro</a>
-            <a href="basvuru.html">Akademiye Katıl</a>
-        </nav>
-    </header>
-
-    <!-- 2. SİTE ANA İÇERİĞİ -->
-    <main>
-        <!-- SOL TARAF: ANA YAZILAR (Section) -->
-        <section class="ana-icerik">
-            <h2>Dünyayı Kurtarmaya Hazır Mısın?</h2>
-            <p>Akademimiz, özel yetenekleri olan bireyleri tespit etmek, eğitmek ve onları dünyayı koruyacak birer kahramana dönüştürmek için kurulmuştur.</p>
-            <article>
-                <h3>Son Görev Raporu</h3>
-                <p><strong>Tarih:</strong> <time datetime="2024-10-25">25 Ekim 2024</time></p>
-                <p>Galaktik tehdit başarıyla savuşturuldu. Alpha takımı üsse güvenle dönüş yaptı.</p>
-            </article>
-        </section>
-
-        <!-- SAĞ TARAF: YAN BİLGİ ÇUBUĞU (Aside) -->
-        <aside class="duyurular">
-            <h3>Acil Duyurular</h3>
-            <ul>
-                <li>Yeni uçuş simülatörleri aktif.</li>
-                <li>Pelerin kullanım eğitimi yarına ertelendi.</li>
-                <li><em>Kriptonit</em> odasına giriş yasaktır!</li>
-            </ul>
-        </aside>
-    </main>
-
-    <!-- 3. SİTE ALT BİLGİSİ -->
-    <footer>
-        <p>&copy; 2024 Süper Kahraman Akademisi | Gizlilik Derecesi: Çok Gizli</p>
-    </footer>
+<body class="academy-home">
+  <div class="ambient-grid" aria-hidden="true"></div>
+  <header class="academy-header">
+    <a class="academy-brand" href="index.html"><span class="brand-emblem">A</span><span>HERO<br><b>ACADEMY</b></span></a>
+    <nav aria-label="Akademi menüsü"><a class="nav-current" href="index.html">ANA ÜS</a><a href="kadro.html">KAHRAMAN KADROSU</a><a href="basvuru.html">EĞİTİM</a></nav>
+    <a class="header-apply" href="basvuru.html">BAŞVURU YAP <span>↗</span></a>
+  </header>
+  <main>
+    <section class="academy-hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="mission-status"><span class="pulse-dot"></span> MERKEZ ÜS AKTİF <i></i> DOSYA NO. 07—A</div>
+        <p class="hero-kicker">YETENEĞİNİ KEŞFET · GELECEĞİ KORU</p>
+        <h1 id="hero-title">Dünya yeni<br>bir <em>kahraman</em><br>bekliyor.</h1>
+        <p class="hero-description">Sıradanlığın bittiği yerde senin hikâyen başlar. Güçlerini eğit, ekibini bul ve yarının görevlerine hazır ol.</p>
+        <div class="hero-actions"><a class="apply-button" href="basvuru.html">AKADEMİYE KATIL <span>↗</span></a><a class="roster-link" href="kadro.html"><span class="play-symbol">▶</span> Kahraman kadrosunu tanı</a></div>
+        <div class="academy-stats"><div><strong>07</strong><span>aktif kahraman</span></div><i></i><div><strong>24/7</strong><span>hazır olma durumu</span></div><i></i><div><strong>∞</strong><span>korunacak gelecek</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="Akademinin üç boyutlu enerji amblemi">
+        <div class="energy-ring ring-outer"></div><div class="energy-ring ring-inner"></div><div class="energy-orbit"></div>
+        <div class="crest-shadow"></div><div class="hero-crest"><div class="crest-glass"></div><span class="crest-letter">A</span><span class="crest-star">✦</span></div>
+        <div class="energy-core"></div><div class="hero-spark spark-one">✦</div><div class="hero-spark spark-two">✧</div><div class="hero-spark spark-three">+</div>
+        <div class="art-caption"><span>ACADEMY DEFENSE GRID</span><b>ONLINE <i></i></b></div><div class="art-coordinate">40° 43′ 55″ N<br>SECURE LOCATION</div>
+      </div>
+      <a class="scroll-cue" href="#mission"><span></span> AKADEMİYİ KEŞFET</a>
+    </section>
+    <section class="mission-section" id="mission">
+      <div class="section-topline"><span>01 / AKADEMİ DOSYASI</span><span>GÜÇ · SORUMLULUK · TAKIM</span></div>
+      <div class="mission-grid"><div class="mission-intro"><p class="section-kicker">BİZİM GÖREVİMİZ</p><h2>Güç, doğru ellerde<br><em>bir umuda dönüşür.</em></h2><p>Akademimiz, sıra dışı yetenekleri olan gençleri bulur, eğitir ve dünyayı korumaya hazır bir takıma dönüştürür. Her kahraman bir seçimle başlar.</p><a class="underlined-link" href="basvuru.html">Kendi hikâyeni başlat <span>↗</span></a></div>
+        <article class="mission-report"><div class="report-top"><span class="report-icon">⌁</span><span>GÖREV RAPORU <b>● TAMAMLANDI</b></span></div><p class="report-number">SON OPERASYON <span>№ 024</span></p><h3>Yörünge<br>güvende.</h3><p>Galaktik tehdit savuşturuldu. Alpha takımı üsse güvenle döndü. Şehir genelinde olağanüstü durum sona erdi.</p><div class="report-bottom"><span>25 EKİM 2024</span><span>ALPHA EKİBİ <i>↗</i></span></div></article>
+      </div>
+    </section>
+    <a class="ankara-feature" href="ankara/index.html"><span class="ankara-feature-mark">A</span><span><small>ŞEHİR REHBERİ · 01</small><strong>Ankara'yı keşfet.</strong><em>Başkentte tarih, mimari ve yerel tatlar.</em></span><b>KEŞFET ↗</b></a>
+    <section class="alert-strip" aria-label="Akademi duyuruları"><div class="alert-icon">!</div><div><span>AKADEMİ DUYURUSU</span><p>Yeni uçuş simülatörleri aktif. Eğitim programı için başvurular başladı.</p></div><a href="basvuru.html" aria-label="Başvuru detayları">↗</a></section>
+    <section class="join-section"><span class="section-kicker">SIRADAKİ KAHRAMAN SEN OL</span><h2>Hazır mısın?</h2><p>Güçlerini keşfet. Ekibine katıl. Dünyanın sana ihtiyacı var.</p><a class="apply-button" href="basvuru.html">BAŞVURU DOSYANI AÇ <span>↗</span></a><div class="join-watermark" aria-hidden="true">A</div></section>
+  </main>
+  <footer class="academy-footer"><a class="academy-brand" href="#baslangic"><span class="brand-emblem">A</span><span>HERO<br><b>ACADEMY</b></span></a><span>© 2026 SÜPER KAHRAMAN AKADEMİSİ · GİZLİLİK DERECESİ: ÇOK GİZLİ</span><a href="#baslangic">ANA ÜS ↑</a></footer>
+  <script src="home.js"></script>
+<style>.project-home-return:hover{transform:translateY(-3px);background:#2a2730!important;border-color:#e5d19f!important;color:#f6e8bc!important;box-shadow:0 12px 28px #0008,0 0 18px #d5b87722}.project-home-return:focus-visible{outline:2px solid #e5d19f;outline-offset:4px}</style>
+<a class="project-home-return" href="../index.html" aria-label="Ana portfolyo sayfasına dön" title="Ana portfolyo sayfasına dön" style="position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:9px;padding:11px 14px;border:1px solid #d5b87799;border-radius:3px;background:rgba(23,21,28,.96);color:#e5d19f;font:600 10px Cinzel,Georgia,serif;letter-spacing:.06em;text-decoration:none;box-shadow:0 8px 24px #0008;backdrop-filter:blur(10px);transition:transform .2s,background .2s,border-color .2s">⌂ <span>ANA SAYFA</span></a>
 </body>
 </html>
+
+

@@ -1,61 +1,43 @@
-codeHtml
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CosmicTours | Gezegen Turları</title>
-    <link rel="stylesheet" href="style.css"> <!-- Aynı CSS dosyasını bağladık! -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070914">
+  <meta name="description" content="Mars, Jüpiter ve Satürn için CosmicTours uzay yolculuklarını keşfedin.">
+  <title>Gezegen Rotaları — CosmicTours</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <header>
-        <h1 id="logo">🌌 CosmicTours</h1>
-        <nav>
-            <a href="index.html">🏠 Merkez Üs</a>
-            <a href="turlar.html" class="aktif-link">🛸 Gezegen Turları</a>
-        </nav>
-    </header>
-
-    <main>
-        <div class="galeri-kapsayici">
-            
-            <!-- 1. KART -->
-            <article class="gezegen-karti">
-                <img src="gorseller/mars.jpg" alt="Mars Turu">
-                <div class="kart-icerik">
-                    <h3>🔴 Kızıl Gezegen Mars</h3>
-                    <p>Olimpos Dağı'nın eteklerinde kızıl kum fırtınalarını güvenli fanus otellerimizden izleyin.</p>
-                    <a href="#" class="neon-buton">🎫 Bilet Al</a>
-                </div>
-            </article>
-
-            <!-- 2. KART -->
-            <article class="gezegen-karti">
-                <img src="gorseller/jupiter.jpg" alt="Jüpiter Turu">
-                <div class="kart-icerik">
-                    <h3>🌀 Gaz Devi Jüpiter</h3>
-                    <p>Büyük Kırmızı Leke'nin etrafında yörünge turu. Sadece cesaretli gezginler için.</p>
-                    <a href="#" class="neon-buton">🎫 Bilet Al</a>
-                </div>
-            </article>
-
-            <!-- 3. KART -->
-            <article class="gezegen-karti">
-                <img src="gorseller/saturn.jpg" alt="Satürn Turu">
-                <div class="kart-icerik">
-                    <h3>💍 Halkaların Efendisi Satürn</h3>
-                    <p>Buz ve kayadan oluşan efsanevi halkaların arasında romantik bir uzay yürüyüşü.</p>
-                    <a href="#" class="neon-buton">🎫 Bilet Al</a>
-                </div>
-            </article>
-
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 CosmicTours A.Ş. 🌍 Tüm Galaktik Hakları Saklıdır.</p>
-    </footer>
-
+<body class="tours-page">
+  <div class="space-grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CosmicTours ana sayfa"><span class="brand-mark">✳</span> COSMIC<span>TOURS</span></a>
+    <nav aria-label="Ana menü"><a href="index.html">Keşfet</a><a class="nav-active" href="turlar.html">Rotalar</a><a href="index.html#hakkimizda">Deneyim</a></nav>
+    <a class="header-cta" href="index.html#rotalar">Öne çıkanlar <span>↗</span></a>
+  </header>
+  <main>
+    <section class="tour-hero">
+      <div class="tour-hero-image"><img src="gorseller/saturn.jpg" alt="Satürn'ün halkaları arasından uzay manzarası"><span class="image-caption">SATÜRN SİSTEMİ · 9.5 AU</span></div>
+      <div class="tour-hero-copy"><span class="eyebrow">COSMICTOURS KEŞİF DOSYASI / 001</span><h1>Uzaklık, artık<br><em>bir engel değil.</em></h1><p>Özenle tasarlanmış rotalar, yıldızlararası konfor ve ömür boyu anlatacağın manzaralar. Sana en uygun dünyayı seç.</p><div class="tour-stats"><div><strong>03</strong><span>özel rota</span></div><i></i><div><strong>2089</strong><span>sezonu açık</span></div><i></i><div><strong>★★★★★</strong><span>gezginlerin seçimi</span></div></div></div>
+    </section>
+    <section class="itinerary-section" aria-labelledby="itinerary-title">
+      <div class="itinerary-heading"><div><span class="eyebrow">GÜNEŞ SİSTEMİ ROTALARI</span><h2 id="itinerary-title">Yolculuğunu seç.</h2></div><span class="heading-note">Tüm rotalar uzman rehberler<br>ve kişisel kabin hizmeti içerir.</span></div>
+      <div class="itinerary-list">
+        <article class="itinerary-card route-mars"><div class="route-visual"><img src="gorseller/mars.jpg" alt="Mars'ın kızıl yüzeyi" loading="lazy"><span class="route-number">01</span><span class="route-orbit"></span><span class="route-tag">MACERA · BAŞLANGIÇ SEVİYESİ</span></div><div class="route-details"><div class="route-meta"><span>EN ÇOK TERCİH EDİLEN</span><span>8 GÜN / 7 GECE</span></div><h3>Mars<br><em>Kızıl ufkun ötesi.</em></h3><p>Olimpos Dağı'nın gölgesinde keşif yürüyüşleri, panoramik cam kubbede konaklama ve gün batımında Mars vadileri.</p><div class="route-includes"><span>◉ Cam kubbe konaklama</span><span>✦ Vadi keşif aracı</span></div><div class="route-bottom"><div><span class="price-label">KİŞİ BAŞI, BAŞLANGIÇ</span><strong>₡ 24.800 <small>/ yolculuk</small></strong></div><a href="index.html#rotalar" class="route-button">Rotayı keşfet <span>↗</span></a></div></div></article>
+        <article class="itinerary-card route-jupiter"><div class="route-visual"><img src="gorseller/jupiter.jpg" alt="Jüpiter'in dev bulutları ve fırtınaları" loading="lazy"><span class="route-number">02</span><span class="route-orbit"></span><span class="route-tag">YÖRÜNGE · İLERİ SEVİYE</span></div><div class="route-details"><div class="route-meta"><span>DERİN UZAY DENEYİMİ</span><span>12 GÜN / 11 GECE</span></div><h3>Jüpiter<br><em>Fırtınaya yakın.</em></h3><p>Gaz devinin bulutlarının üzerinde güvenli yörünge seyri. Büyük Kırmızı Leke'yi özel gözlem güvertesinden izle.</p><div class="route-includes"><span>◉ Panoramik yörünge suit'i</span><span>✦ Astronom rehberi</span></div><div class="route-bottom"><div><span class="price-label">KİŞİ BAŞI, BAŞLANGIÇ</span><strong>₡ 38.500 <small>/ yolculuk</small></strong></div><a href="index.html#rotalar" class="route-button">Rotayı keşfet <span>↗</span></a></div></div></article>
+        <article class="itinerary-card route-saturn"><div class="route-visual"><img src="gorseller/saturn.jpg" alt="Satürn'ün görkemli halkaları" loading="lazy"><span class="route-number">03</span><span class="route-orbit"></span><span class="route-tag">İMZA YOLCULUK · PREMIUM</span></div><div class="route-details"><div class="route-meta"><span>KOLEKSİYONUN ZİRVESİ</span><span>10 GÜN / 9 GECE</span></div><h3>Satürn<br><em>Halkaların arasında.</em></h3><p>Buz halkalarının kıyısında özel bir uçuş rotası, Titan manzaralı süit ve Satürn ışığında unutulmaz bir akşam.</p><div class="route-includes"><span>◉ Titan manzaralı süit</span><span>✦ Halka geçişi uçuşu</span></div><div class="route-bottom"><div><span class="price-label">KİŞİ BAŞI, BAŞLANGIÇ</span><strong>₡ 42.900 <small>/ yolculuk</small></strong></div><a href="index.html#rotalar" class="route-button">Rotayı keşfet <span>↗</span></a></div></div></article>
+      </div>
+      <p class="price-disclaimer">Rota süreleri ve ücretler kurgu evrenine ait örnek bilgilerdir.</p>
+    </section>
+    <section class="tour-footer-cta"><span class="eyebrow">KENDİNE BİR YER AYIR</span><h2>Bir sonraki büyük hikâye<br><em>seninle başlıyor.</em></h2><a class="primary-button" href="index.html#rotalar">CosmicTours'a dön <span>↗</span></a></section>
+  </main>
+  <footer><a class="brand" href="index.html"><span class="brand-mark">✳</span> COSMIC<span>TOURS</span></a><span>© 2089 COSMICTOURS · EVRENİN HER YERİNDE</span><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">Başa dön ↑</a></footer>
+<style>.project-home-return:hover{transform:translateY(-3px);background:#2a2730!important;border-color:#e5d19f!important;color:#f6e8bc!important;box-shadow:0 12px 28px #0008,0 0 18px #d5b87722}.project-home-return:focus-visible{outline:2px solid #e5d19f;outline-offset:4px}</style>
+<a class="project-home-return" href="../index.html" aria-label="Ana portfolyo sayfasına dön" title="Ana portfolyo sayfasına dön" style="position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:9px;padding:11px 14px;border:1px solid #d5b87799;border-radius:3px;background:rgba(23,21,28,.96);color:#e5d19f;font:600 10px Cinzel,Georgia,serif;letter-spacing:.06em;text-decoration:none;box-shadow:0 8px 24px #0008;backdrop-filter:blur(10px);transition:transform .2s,background .2s,border-color .2s">⌂ <span>ANA SAYFA</span></a>
 </body>
 </html>
+
+

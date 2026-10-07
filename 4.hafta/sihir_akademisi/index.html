@@ -1,31 +1,42 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#17151c">
-    <title>Arcanum Akademisi</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100f19">
+  <meta name="description" content="Arcanum Akademisi'nde büyü, savunma, yaratık bakımı ve iksir derslerini keşfet.">
+  <title>Arcanum Akademisi — İçindeki büyüyü uyandır</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="sabit-menu">
-        <a class="wordmark" href="#baslangic">ARCANUM <span>AKADEMİSİ</span></a>
-        <nav aria-label="Ana menü"><a href="#bolumler">Bölümler</a><a class="nav-cta" href="#kayit">Kayıt ol <span aria-hidden="true">↗</span></a></nav>
-    </header>
-    <main id="baslangic">
-        <section class="giris-alani" aria-labelledby="ana-baslik"><p class="eyebrow">BİLGELİK · CESARET · MERAK</p><h1 id="ana-baslik">İçindeki büyüyü <em>uyandır.</em></h1><p>Sıradan dünyayı geride bırak. Binlerce yıllık sırlar, yeni bir dönemin başlangıcında seni bekliyor.</p><a class="kesfet" href="#bolumler">Akademiyi keşfet <span aria-hidden="true">↓</span></a></section>
-        <section class="bolumler" id="bolumler" aria-label="Akademi bölümleri">
-            <a class="buyu-karti genis-kart kampus" href="#kayit" aria-label="Ana Kampüs dersleri için kayıt formuna git"><img src="görseller/şato.jpg" alt="Akademinin büyülü şatosu" loading="lazy"><span class="karti-karart"></span><span class="kart-etiket">AKADEMİNİN KALBİ</span><span class="kart-yazisi"><span>01 / KEŞFET</span><strong class="kart-baslik">Ana Kampüs</strong><span class="kart-aciklama">Uçuş dersleri, kadim salonlar ve büyük buluşmalar.</span><span class="kart-cta">DERSLERİ KEŞFET <span aria-hidden="true">↗</span></span></span></a>
-            <a class="buyu-karti karanlik" href="#kayit" aria-label="Karanlık Sanatlar dersi için kayıt formuna git"><img src="görseller/büyücü.jpg" alt="Büyücü karanlık sanatlar dersinde" loading="lazy"><span class="karti-karart"></span><span class="rozet yeni">YENİ DERS</span><span class="kart-yazisi"><span>02 / SAVUNMA</span><strong class="kart-baslik">Karanlık Sanatlar</strong><span class="kart-aciklama">En güçlü büyü, kendini korumayı bilmektir.</span><span class="kart-cta">DERSİ KEŞFET <span aria-hidden="true">↗</span></span></span></a>
-            <a class="buyu-karti yaratik" href="#kayit" aria-label="Yaratık Bakımı dersi için kayıt formuna git"><img src="görseller/ejderha.jpg" alt="Ejderha ve büyülü yaratıklar" loading="lazy"><span class="karti-karart"></span><span class="rozet tehlike">İLERİ SEVİYE</span><span class="kart-yazisi"><span>03 / SAHA DERSİ</span><strong class="kart-baslik">Yaratık Bakımı</strong><span class="kart-aciklama">Ejderhalara fısıldayan öğrenciler aranıyor.</span><span class="kart-cta">DERSİ KEŞFET <span aria-hidden="true">↗</span></span></span></a>
-            <a class="buyu-karti uzun-kart iksir" href="#kayit" aria-label="İksir Yapımı dersi için kayıt formuna git"><img src="görseller/iksir.webp" alt="Renkli iksir şişeleri" loading="lazy"><span class="karti-karart"></span><span class="kart-yazisi"><span>04 / LABORATUVAR</span><strong class="kart-baslik">İksir Yapımı</strong><span class="kart-aciklama">Şişelenmiş şöhret, kaynatılmış ihtişam.</span><span class="kart-cta">DERSİ KEŞFET <span aria-hidden="true">↗</span></span></span></a>
-        </section>
-        <section class="kayit" id="kayit" aria-labelledby="kayit-baslik"><p class="eyebrow">YENİ DÖNEM BAŞLIYOR</p><h2 id="kayit-baslik">Kendi hikâyeni yaz.</h2><p class="form-notu">Akademi başvuru formu · Demo</p><form class="kayit-formu" id="kayit-formu"><label>Adın<input name="ad" autocomplete="name" required minlength="2" placeholder="Adını yaz"></label><label>E-posta adresin<input name="email" type="email" autocomplete="email" required placeholder="ornek@mail.com"></label><label>İlgilendiğin ders<select name="ders" required><option value="" disabled selected>Ders seç</option><option>Ana Kampüs</option><option>Karanlık Sanatlar</option><option>Yaratık Bakımı</option><option>İksir Yapımı</option></select></label><button type="submit">DEMO BAŞVURUSU GÖNDER <span aria-hidden="true">↗</span></button></form><p class="form-durum" id="form-durum" aria-live="polite">Bu demo formu bilgileri sunucuya göndermez.</p></section>
-    </main>
-    <footer><a class="wordmark" href="#baslangic">ARCANUM <span>AKADEMİSİ</span></a><p>Eski bilgeliğin izinde, yeni bir gelecek için.</p></footer>
-    <script src="akademi.js"></script>
+  <div class="starfield" aria-hidden="true"></div>
+  <header class="sabit-menu">
+    <a class="wordmark" href="#baslangic"><span class="brand-sigil">A</span><span class="wordmark-text">ARCANUM <b>AKADEMİSİ</b></span></a>
+    <nav aria-label="Ana menü"><a href="#bolumler">Bölümler</a><a href="#akademi">Akademi</a><a class="nav-cta" href="#kayit">Kayıt ol <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="baslangic">
+    <section class="giris-alani" aria-labelledby="ana-baslik">
+      <div class="hero-copy"><p class="eyebrow"><span class="status-light"></span> BİLGELİK · CESARET · MERAK</p><h1 id="ana-baslik">İçindeki büyüyü<br><em>uyandır.</em></h1><p>Sıradan dünyayı geride bırak. Binlerce yıllık sırlar, yeni bir dönemin başlangıcında seni bekliyor.</p><div class="hero-links"><a class="kesfet" href="#bolumler">Akademiyi keşfet <span aria-hidden="true">↓</span></a><span class="hero-note">DÖNEM 2026 <i>·</i> KAYITLAR AÇIK</span></div></div>
+      <div class="magic-stage" aria-label="Arcanum'un büyülü enerji küresi"><div class="magic-halo halo-one"></div><div class="magic-halo halo-two"></div><div class="magic-orbit orbit-one"></div><div class="magic-orbit orbit-two"></div><div class="magic-crystal"><div class="crystal-facet"></div><span>✧</span></div><div class="magic-spark spark-a">✦</div><div class="magic-spark spark-b">✧</div><div class="magic-spark spark-c">✦</div><div class="magic-label">ARCANUM<br><b>EST. 1092</b></div><div class="magic-coordinate">51° 30′ 26″ N<br>HIDDEN IN PLAIN SIGHT</div></div>
+      <a class="hero-scroll" href="#bolumler"><span></span> AKADEMİYİ KEŞFET</a>
+    </section>
+    <section class="bolumler" id="bolumler" aria-label="Akademi bölümleri">
+      <div class="section-intro"><span class="eyebrow">DÖRT YOL · TEK AKADEMİ</span><h2>Bilginin kapıları.</h2><p>İlgi alanını seç, kendi büyü yolculuğuna başla.</p></div>
+      <a class="buyu-karti genis-kart kampus" href="#kayit" aria-label="Ana Kampüs dersleri için kayıt formuna git"><img src="gorseller/sato.jpg" alt="Akademinin büyülü şatosu" loading="lazy"><span class="karti-karart"></span><span class="kart-etiket">AKADEMİNİN KALBİ</span><span class="kart-yazisi"><span>01 / KEŞFET</span><strong class="kart-baslik">Ana Kampüs</strong><span class="kart-aciklama">Uçuş dersleri, kadim salonlar ve büyük buluşmalar.</span><span class="kart-cta">DERSLERİ KEŞFET <span aria-hidden="true">↗</span></span></span><span class="card-index">01</span></a>
+      <a class="buyu-karti karanlik" href="#kayit" aria-label="Karanlık Sanatlar dersi için kayıt formuna git"><img src="gorseller/buyucu.jpg" alt="Büyücü karanlık sanatlar dersinde" loading="lazy"><span class="karti-karart"></span><span class="rozet yeni">YENİ DERS</span><span class="kart-yazisi"><span>02 / SAVUNMA</span><strong class="kart-baslik">Karanlık Sanatlar</strong><span class="kart-aciklama">En güçlü büyü, kendini korumayı bilmektir.</span><span class="kart-cta">DERSİ KEŞFET <span aria-hidden="true">↗</span></span></span><span class="card-index">02</span></a>
+      <a class="buyu-karti yaratik" href="#kayit" aria-label="Yaratık Bakımı dersi için kayıt formuna git"><img src="gorseller/ejderha.jpg" alt="Ejderha ve büyülü yaratıklar" loading="lazy"><span class="karti-karart"></span><span class="rozet tehlike">İLERİ SEVİYE</span><span class="kart-yazisi"><span>03 / SAHA DERSİ</span><strong class="kart-baslik">Yaratık Bakımı</strong><span class="kart-aciklama">Ejderhalara fısıldayan öğrenciler aranıyor.</span><span class="kart-cta">DERSİ KEŞFET <span aria-hidden="true">↗</span></span></span><span class="card-index">03</span></a>
+      <a class="buyu-karti uzun-kart iksir" href="#kayit" aria-label="İksir Yapımı dersi için kayıt formuna git"><img src="gorseller/iksir.webp" alt="Renkli iksir şişeleri" loading="lazy"><span class="karti-karart"></span><span class="kart-yazisi"><span>04 / LABORATUVAR</span><strong class="kart-baslik">İksir Yapımı</strong><span class="kart-aciklama">Şişelenmiş şöhret, kaynatılmış ihtişam.</span><span class="kart-cta">DERSİ KEŞFET <span aria-hidden="true">↗</span></span></span><span class="card-index">04</span></a>
+    </section>
+    <section class="akademi-note" id="akademi"><div><span class="eyebrow">ESKİ BİLGELİK · YENİ BİR GELECEK</span><h2>Büyü, merakla başlar.</h2></div><p>Arcanum'da her ders yeni bir kapı, her öğrenci kendi hikâyesinin kahramanıdır. Sana uygun yolu bul ve ilk adımını at.</p><a href="#kayit">Akademi hakkında <span>↗</span></a></section>
+    <section class="kayit" id="kayit" aria-labelledby="kayit-baslik"><p class="eyebrow">YENİ DÖNEM BAŞLIYOR</p><h2 id="kayit-baslik">Kendi hikâyeni yaz.</h2><p class="form-notu">Akademi başvuru formu · Demo</p><form class="kayit-formu" id="kayit-formu"><label>Adın<input name="ad" autocomplete="name" required minlength="2" placeholder="Adını yaz"></label><label>E-posta adresin<input name="email" type="email" autocomplete="email" required placeholder="ornek@mail.com"></label><label>İlgilendiğin ders<select name="ders" required><option value="" disabled selected>Ders seç</option><option>Ana Kampüs</option><option>Karanlık Sanatlar</option><option>Yaratık Bakımı</option><option>İksir Yapımı</option></select></label><button type="submit">DEMO BAŞVURUSU GÖNDER <span aria-hidden="true">↗</span></button></form><p class="form-durum" id="form-durum" aria-live="polite">Bu demo formu bilgileri sunucuya göndermez.</p></section>
+  </main>
+  <footer><a class="wordmark" href="#baslangic"><span class="brand-sigil">A</span><span class="wordmark-text">ARCANUM <b>AKADEMİSİ</b></span></a><p>Eski bilgeliğin izinde, yeni bir gelecek için.</p><a class="footer-top" href="#baslangic">YUKARI DÖN ↑</a></footer>
+  <script src="akademi.js"></script>
+<style>.project-home-return:hover{transform:translateY(-3px);background:#2a2730!important;border-color:#e5d19f!important;color:#f6e8bc!important;box-shadow:0 12px 28px #0008,0 0 18px #d5b87722}.project-home-return:focus-visible{outline:2px solid #e5d19f;outline-offset:4px}</style>
+<a class="project-home-return" href="../../index.html" aria-label="Ana portfolyo sayfasına dön" title="Ana portfolyo sayfasına dön" style="position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:9px;padding:11px 14px;border:1px solid #d5b87799;border-radius:3px;background:rgba(23,21,28,.96);color:#e5d19f;font:600 10px Cinzel,Georgia,serif;letter-spacing:.06em;text-decoration:none;box-shadow:0 8px 24px #0008;backdrop-filter:blur(10px);transition:transform .2s,background .2s,border-color .2s">⌂ <span>ANA SAYFA</span></a>
 </body>
 </html>
+

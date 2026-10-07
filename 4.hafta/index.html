@@ -1,48 +1,56 @@
-codeHtml
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CosmicTours | Uzay Seni Çağırıyor</title>
-    
-    <!-- CSS EKLEME YÖNTEMİ 1: SAYFA DIŞI (EXTERNAL) CSS -->
-    <!-- En profesyonel yöntemdir. Tüm sayfalar bu dosyadan beslenir. -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- CSS EKLEME YÖNTEMİ 2: SAYFA İÇİ (INTERNAL) CSS -->
-    <!-- Sadece bu sayfaya (index.html) özel bir ayar yapmak istersek kullanırız. -->
-    <style>
-        .ana-sayfa-ozel { border-bottom: 3px dashed #f39c12; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070914">
+  <meta name="description" content="CosmicTours ile Güneş Sistemi'nin en etkileyici dünyalarını keşfedin.">
+  <title>CosmicTours — Dünyanın Ötesine Yolculuk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <h1 id="logo">🌌 CosmicTours</h1>
-        <nav>
-            <a href="index.html" class="aktif-link">🏠 Merkez Üs</a>
-            <a href="turlar.html">🛸 Gezegen Turları</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="karsilama-alani">
-            <h2 class="ana-sayfa-ozel">🚀 Sıradaki Tatiliniz Dünya Dışında!</h2>
-            
-            <p class="hikaye-metni">İnsanlık sınırları aştı. Artık Ay'da yürümek sıradan bir hafta sonu aktivitesi. CosmicTours ile Güneş sisteminin en egzotik köşelerine lüks kruvaziyer gemilerimizle seyahat edin.</p>
-            
-            <!-- CSS EKLEME YÖNTEMİ 3: SATIR İÇİ (INLINE) CSS -->
-            <!-- Acil ve tek seferlik durumlarda kullanılır. Çok tavsiye edilmez! -->
-            <p style="color: red; font-weight: bold;">⚠️ DİKKAT: Venüs turlarımız aşırı sıcaklık sebebiyle geçici olarak durdurulmuştur.</p>
-
-            <a href="turlar.html" class="neon-buton">🌟 Turları Keşfet</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 CosmicTours A.Ş. 🌍 Tüm Galaktik Hakları Saklıdır.</p>
-    </footer>
-
+  <div class="space-grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CosmicTours ana sayfa"><span class="brand-mark">✳</span> COSMIC<span>TOURS</span></a>
+    <nav aria-label="Ana menü"><a class="nav-active" href="index.html">Keşfet</a><a href="#rotalar">Rotalar</a><a href="#hakkimizda">Deneyim</a></nav>
+    <a class="header-cta" href="turlar.html">Turları incele <span>↗</span></a>
+  </header>
+  <main>
+    <section class="hero" id="hakkimizda">
+      <div class="hero-copy">
+        <div class="status"><span></span> 2089 SEZONU · REZERVASYONLAR AÇIK</div>
+        <h1>Dünya küçük.<br><em>Evren senin.</em></h1>
+        <p>Alışılmışın çok ötesinde bir yolculuk. Güneş Sistemi'nin görkemli dünyalarını, yeni nesil yıldız gemilerimizle keşfet.</p>
+        <div class="hero-actions"><a class="primary-button" href="#rotalar">Yolculuğu keşfet <span>↗</span></a><a class="text-link" href="turlar.html"><span class="play-icon">▶</span> Rotaları görüntüle</a></div>
+        <div class="hero-proof"><div class="avatar-stack"><i>✦</i><i>◉</i><i>✧</i></div><div><strong>12.400+</strong><span>mutlu uzay yolcusu</span></div><div class="proof-divider"></div><div><strong>4.98 / 5</strong><span>gezgin değerlendirmesi</span></div></div>
+      </div>
+      <div class="hero-visual" aria-label="Uzayda süzülen gezegen ve yıldız gemisi">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-planet"><img src="gorseller/jupiter.jpg" alt="Jüpiter'in bulutları" fetchpriority="high"><div class="planet-shade"></div></div>
+        <div class="hero-moon"></div><div class="ship"><span>✦</span></div>
+        <div class="planet-label"><span>01 — GÜNEŞ SİSTEMİ</span><strong>Yeni bir dünya,<br>yeni bir sen.</strong></div>
+        <div class="coordinates">18° 32′ 09.4″ N<br>JUPITER ORBIT</div>
+      </div>
+      <a href="#rotalar" class="scroll-hint"><span></span> AŞAĞI KAYDIR</a>
+    </section>
+    <section class="destinations" id="rotalar">
+      <div class="section-heading"><div><span class="eyebrow">SINIRLARIN ÖTESİ</span><h2>Bir sonraki durağın.</h2></div><div class="slider-controls"><span class="slider-count"><b id="current-slide">01</b> / 03</span><button type="button" id="prev-planet" aria-label="Önceki gezegen">←</button><button type="button" id="next-planet" aria-label="Sonraki gezegen">→</button></div></div>
+      <div class="planet-track" id="planet-track" tabindex="0" aria-label="Gezegen rotaları">
+        <article class="destination-card mars-card"><img src="gorseller/mars.jpg" alt="Mars yüzeyinde kızıl dağlar" loading="lazy"><div class="card-overlay"></div><div class="card-top"><span>01 / KIZIL DÜNYA</span><span class="duration">8 GÜN</span></div><div class="destination-info"><div><span class="distance">225 M KM · 4 AY YOLCULUK</span><h3>Mars</h3><p>Olimpos Dağı'nın gölgesinde, yıldızlara dokun.</p></div><a href="turlar.html" aria-label="Mars turunu keşfet">↗</a></div></article>
+        <article class="destination-card jupiter-card"><img src="gorseller/jupiter.jpg" alt="Jüpiter'in dev fırtına bulutları" loading="lazy"><div class="card-overlay"></div><div class="card-top"><span>02 / GAZ DEVE</span><span class="duration">12 GÜN</span></div><div class="destination-info"><div><span class="distance">628 M KM · 7 AY YOLCULUK</span><h3>Jüpiter</h3><p>Büyük Kırmızı Leke'ye yörüngeden tanık ol.</p></div><a href="turlar.html" aria-label="Jüpiter turunu keşfet">↗</a></div></article>
+        <article class="destination-card saturn-card"><img src="gorseller/saturn.jpg" alt="Satürn ve ihtişamlı halkaları" loading="lazy"><div class="card-overlay"></div><div class="card-top"><span>03 / HALKALI DEV</span><span class="duration">10 GÜN</span></div><div class="destination-info"><div><span class="distance">1.2 MLRD KM · 9 AY YOLCULUK</span><h3>Satürn</h3><p>Halkaların içinden geçen eşsiz bir yıldız yürüyüşü.</p></div><a href="turlar.html" aria-label="Satürn turunu keşfet">↗</a></div></article>
+      </div>
+      <div class="track-progress"><span id="track-progress"></span></div>
+    </section>
+    <section class="closing-note"><span class="eyebrow">EVREN BEKLİYOR</span><p>Bir yolculuktan fazlası.<br><em>Bakış açını değiştiren bir deneyim.</em></p><a href="turlar.html" class="text-link">Tüm yolculukları gör <span>↗</span></a></section>
+  </main>
+  <footer><a class="brand" href="index.html"><span class="brand-mark">✳</span> COSMIC<span>TOURS</span></a><span>© 2089 COSMICTOURS · EVRENİN HER YERİNDE</span><a href="#hakkimizda">Başa dön ↑</a></footer>
+  <script src="cosmic.js"></script>
+<style>.project-home-return:hover{transform:translateY(-3px);background:#2a2730!important;border-color:#e5d19f!important;color:#f6e8bc!important;box-shadow:0 12px 28px #0008,0 0 18px #d5b87722}.project-home-return:focus-visible{outline:2px solid #e5d19f;outline-offset:4px}</style>
+<a class="project-home-return" href="../index.html" aria-label="Ana portfolyo sayfasına dön" title="Ana portfolyo sayfasına dön" style="position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:9px;padding:11px 14px;border:1px solid #d5b87799;border-radius:3px;background:rgba(23,21,28,.96);color:#e5d19f;font:600 10px Cinzel,Georgia,serif;letter-spacing:.06em;text-decoration:none;box-shadow:0 8px 24px #0008;backdrop-filter:blur(10px);transition:transform .2s,background .2s,border-color .2s">⌂ <span>ANA SAYFA</span></a>
 </body>
 </html>
+

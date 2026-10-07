@@ -1,75 +1,44 @@
-<!-- 1. ÜST BİLGİ VE MENÜ -->
-   
-<!DOCTYPE html> <!-- 1. SIR: Ben eski sürüm değil, en yeni nesil HTML5 kullanıyorum demek. -->
-<html lang="tr"> <!-- 2. SIR: Arama motorlarına sitemizin dilinin Türkçe olduğunu söyler. -->
+﻿<!DOCTYPE html>
+<html lang="tr">
 <head>
-    <meta charset="UTF-8"> <!-- 3. SIR: Ş, Ğ, Ç gibi Türkçe karakterlerin bozuk çıkmasını engeller! -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 4. SIR: Mobil uyumluluk (Responsive) için en hayati koddur! -->
-    <title>Yapay Zeka Devrimi - Teknoloji Blogu</title>
-    
-    <link rel="stylesheet" href="style.css"> <!-- CSS Bağlantısı -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1114">
+  <meta name="description" content="Yapay zekânın sağlık, eğitim ve üretim dünyasındaki etkilerine dair bir öğrenci makalesi.">
+  <title>Yapay Zekâ Dünyayı Nasıl Değiştiriyor? — Geleceğin Teknolojileri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sayfa içeriği buraya gelecek -->
-     <header>
-        <h1>Geleceğin Teknolojileri</h1> <!-- Sitenin Ana Başlığı (Sayfada 1 tane olur) -->
-        <nav>
-            <a href="#">Ana Sayfa</a> |
-            <a href="#">Yapay Zeka</a> |
-            <a href="#">Robotik</a>
-        </nav>
-    </header>
-
-    <!-- 2. ANA İÇERİK ALANI -->
-    <main>
-        
-        <!-- BAĞIMSIZ MAKALE ALANI -->
-        <article>
-            <header>
-                <h2>Yapay Zeka Dünyayı Nasıl Değiştiriyor?</h2> <!-- Makale Başlığı -->
-                
-                <!-- METİN BİÇİMLENDİRME: <time> etiketi arama motorlarına bunun bir tarih olduğunu söyler -->
-                <p>Yazar: Bilişim Sınıfı | Tarih: <time datetime="2024-10-15">15 Ekim 2024</time></p>
-            </header>
-
-            <!-- RESİM GRUPLAMA (figure ve figcaption) -->
-            <figure>
-                <img src="gorseller/yapayzeka.jpg" alt="Yapay Zeka Beyin Görseli" width="100%">
-                <figcaption>Şekil 1: Yapay zekanın derin öğrenme ağı temsili.</figcaption>
-            </figure>
-
-            <!-- METİN BİÇİMLENDİRME (strong ve em) -->
-            <!-- NOT: <b> sadece kalın yapar, <strong> makineye "bu kelime çok önemli" der! -->
-            <!-- NOT: <i> sadece eğik yapar, <em> makineye "bu kelimeye vurgu yap" der! -->
-            <p>Günümüzde yapay zeka sadece bir bilim kurgu fantezisi değil, <strong>hayatımızın tam merkezinde</strong> yer alan bir gerçekliktir. Özellikle <em>makine öğrenimi</em> sayesinde tıp, eğitim ve mühendislik çağ atlıyor.</p>
-
-            <!-- MAKALE İÇİ ALT BÖLÜM 1 -->
-            <section>
-                <h3>Tıpta Yapay Zeka</h3>
-                <p>Doktorlar artık hastalıkların teşhisinde büyük veri analizlerini kullanıyor. Bu sayede erken teşhis oranları inanılmaz derecede arttı.</p>
-            </section>
-
-            <!-- MAKALE İÇİ ALT BÖLÜM 2 -->
-            <!-- YORUM SATIRI: Ctrl + Ö (veya Ctrl+/) tuşlarına basarak koda not bırakabiliriz. Bu yazılar tarayıcıda görünmez! -->
-            <!-- Aşağıdaki bölüm robotik cerrahiyi anlatıyor -->
-            <section>
-                <h3>Robotik Cerrahi</h3>
-                <p>Milisimetrik hassasiyetle çalışan robot kollar, hata payını neredeyse sıfıra indiriyor.</p>
-            </section>
-        </article>
-
-        <!-- YAN ÇUBUK (ASIDE) - Makalenin yanında duracak ekstra bilgiler -->
-        <aside>
-            <h3>Yazar Hakkında</h3>
-            <p>Bu makale, 11. Sınıf Web Geliştirme öğrencileri tarafından, HTML5 anlamsal etiketleri öğrenmek amacıyla yazılmıştır.</p>
-        </aside>
-
-    </main>
-
-    <!-- 3. ALT BİLGİ -->
-    <footer>
-        <p>Tüm hakları saklıdır &copy; 2024 - Geleceğin Teknolojileri Blogu</p>
-    </footer>
-
+  <div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
+  <header class="site-header" id="baslangic">
+    <a class="publication" href="index.html" aria-label="Geleceğin Teknolojileri ana sayfa"><span class="publication-mark">F</span><span>GELECEĞİN<br><b>TEKNOLOJİLERİ</b></span></a>
+    <nav aria-label="Makale menüsü"><a href="#makale">DOSYA</a><a href="#konular">KONULAR</a><a href="#yazar">YAYIN HAKKINDA</a></nav>
+    <a class="issue-label" href="#makale">BİLİM &amp; YARIN <span>№ 08</span></a>
+  </header>
+  <main id="makale">
+    <section class="article-hero">
+      <div class="article-heading"><div class="breadcrumbs"><a href="index.html">ANA SAYFA</a><span>/</span><span>YAPAY ZEKÂ</span></div><div class="category-label"><span></span> TEKNOLOJİ · 8 DK OKUMA</div><h1>Yapay zekâ<br>dünyayı nasıl <em>değiştiriyor?</em></h1><p class="dek">Makine öğreniminden robotik cerrahiye: her gün kullandığımız teknolojiler, karar alma ve üretme biçimimizi yeniden şekillendiriyor.</p><div class="byline"><div class="author-avatar">B</div><div><strong>Bilişim Sınıfı</strong><span>Öğrenci editörleri · 15 Ekim 2024</span></div><span class="byline-divider"></span><span class="read-time">8 dakika okuma</span></div></div>
+      <figure class="hero-image"><img src="gorseller/yapayzeka.jpg" alt="İnsanlarla birlikte çalışan insansı robotlar" fetchpriority="high"><figcaption><span>01 / 04</span> İnsan ve makine arasında yeni bir iş birliği dönemi.</figcaption></figure>
+      <div class="hero-index" aria-hidden="true">ARAŞTIR<br>· DÜŞÜN<br>· ANLA</div>
+    </section>
+    <div class="article-layout">
+      <aside class="article-sidebar" id="konular"><div class="sidebar-sticky"><p class="sidebar-label">BU YAZIDA</p><a class="toc-link active" href="#girizgah"><span>01</span> Büyük dönüşüm</a><a class="toc-link" href="#tipta-yapay-zeka"><span>02</span> Sağlıkta yeni araçlar</a><a class="toc-link" href="#robotik-cerrahi"><span>03</span> Robotik cerrahi</a><div class="sidebar-rule"></div><p class="sidebar-label">PAYLAŞ</p><a class="share-link" href="mailto:?subject=Yapay%20zeka%20makalesi">E-posta ile gönder <span>↗</span></a><div class="sidebar-note"><span>EDİTÖRÜN NOTU</span><p>Bu yazı, teknolojiyi merak eden öğrenciler için hazırlanmış bir giriş niteliğindedir.</p></div></div></aside>
+      <article class="article-body">
+        <section id="girizgah" class="prose-section"><p class="lead"><span class="dropcap">Y</span>apay zekâ artık yalnızca bilim kurgu hikâyelerinde karşımıza çıkmıyor. Harita önerilerinden çeviri araçlarına kadar, günlük yaşamın birçok noktasında veriden öğrenen sistemlerle karşılaşıyoruz.</p><p>Bu sistemler büyük miktarda bilgide örüntüler bulabiliyor ve belirli görevlerde insanlara yardımcı olabiliyor. Makine öğrenimi adı verilen yaklaşım, bilgisayarların örneklerden öğrenmesini sağlıyor. Sonuçları yararlı olsa da, bu sistemlerin nasıl eğitildiğini ve hangi sınırlar içinde çalıştığını anlamak önem taşıyor.</p><blockquote><span>“</span><p>Yapay zekânın asıl gücü, insanın yerine geçmesinde değil; insanın daha iyi sorular sormasına yardım etmesinde.</p></blockquote></section>
+        <section id="tipta-yapay-zeka" class="prose-section"><div class="section-kicker"><span>02</span><i></i> SAĞLIKTA YENİ ARAÇLAR</div><h2>Tıpta yapay zekâ:<br><em>bir yardımcı göz.</em></h2><p>Tıp alanında yapay zekâ destekli araçlar, görüntüler ve ölçüm sonuçları içindeki işaretleri belirlemeye yardımcı olabilir. Uzmanlar bu çıktıları kendi bilgileriyle birlikte değerlendirir; tanı ve tedavi kararlarının sorumluluğu sağlık profesyonellerindedir.</p><p>Bu araçların güvenilir olabilmesi için çeşitli hasta gruplarını temsil eden verilerle dikkatle değerlendirilmesi gerekir. Veri gizliliği, olası yanlılıklar ve sistemin hata yaptığı durumlar da tasarım sürecinin parçası olmalıdır.</p><div class="insight-card"><div class="insight-icon">✳</div><div><span>ÖNEMLİ NOKTA</span><p>Yapay zekâ öneri sunabilir; her sonuç uzman değerlendirmesi ve klinik bağlam içinde ele alınmalıdır.</p></div></div></section>
+        <section id="robotik-cerrahi" class="prose-section"><div class="section-kicker"><span>03</span><i></i> İNSAN + MAKİNE</div><h2>Robotik cerrahi:<br><em>kontrol hâlâ uzmanda.</em></h2><p>Robot destekli cerrahi sistemler, cerrahın hareketlerini hassas biçimde uygulamasına ve ameliyat alanını büyütülmüş görüntüyle görmesine yardımcı olabilir. Robot kendi başına ameliyat yapmaz; sistemi eğitimli bir cerrah yönetir.</p><p>Her yöntemde olduğu gibi, robotik sistemlerin de kullanım alanları, yararları ve riskleri vardır. Hangi yaklaşımın uygun olduğuna hastanın durumu ve uzman ekibin değerlendirmesiyle karar verilir.</p><div class="closing-thought"><span>SON SÖZ</span><p>Teknoloji hızla değişiyor. Onu daha iyi anlamak için merakımızı, eleştirel düşünmeyi ve insan odağını birlikte korumalıyız.</p></div></section>
+        <div class="article-tags"><span>ETİKETLER</span><a href="#makale">Yapay zekâ</a><a href="#makale">Sağlık teknolojisi</a><a href="#makale">Gelecek</a></div>
+        <section class="author-card" id="yazar"><div class="author-avatar large">B</div><div><span>BU MAKALEYİ HAZIRLAYAN</span><h3>Bilişim Sınıfı</h3><p>11. sınıf web geliştirme öğrencilerinden teknoloji ve dijital kültür üzerine notlar.</p></div><a href="#baslangic" aria-label="Sayfa başına dön">↑</a></section>
+      </article>
+    </div>
+  </main>
+  <footer><a class="publication" href="#baslangic"><span class="publication-mark">F</span><span>GELECEĞİN<br><b>TEKNOLOJİLERİ</b></span></a><span>MERAKLA OKU · ELEŞTİREL DÜŞÜN</span><a href="#baslangic">YUKARI DÖN ↑</a></footer>
+  <script src="article.js"></script>
+<style>.project-home-return:hover{transform:translateY(-3px);background:#2a2730!important;border-color:#e5d19f!important;color:#f6e8bc!important;box-shadow:0 12px 28px #0008,0 0 18px #d5b87722}.project-home-return:focus-visible{outline:2px solid #e5d19f;outline-offset:4px}</style>
+<a class="project-home-return" href="../../index.html" aria-label="Ana portfolyo sayfasına dön" title="Ana portfolyo sayfasına dön" style="position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:9px;padding:11px 14px;border:1px solid #d5b87799;border-radius:3px;background:rgba(23,21,28,.96);color:#e5d19f;font:600 10px Cinzel,Georgia,serif;letter-spacing:.06em;text-decoration:none;box-shadow:0 8px 24px #0008;backdrop-filter:blur(10px);transition:transform .2s,background .2s,border-color .2s">⌂ <span>ANA SAYFA</span></a>
 </body>
 </html>
+

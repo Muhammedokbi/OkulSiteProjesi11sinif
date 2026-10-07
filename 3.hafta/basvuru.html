@@ -1,32 +1,25 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akademiye Katıl</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080b15">
+  <meta name="description" content="Süper Kahraman Akademisi'ne katılmak için aday dosyanı hazırla.">
+  <title>Akademiye Katıl — Süper Kahraman Akademisi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="home.css"><link rel="stylesheet" href="academy-pages.css">
 </head>
-<body>
-    <header>
-        <h1>SÜPER KAHRAMAN AKADEMİSİ</h1>
-        <nav>
-            <a href="index.html">Akademi Merkezi</a>
-            <a href="kadro.html">Aktif Kadro</a>
-            <a href="basvuru.html">Akademiye Katıl</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="tam-sayfa">
-            <h2>Güçlerini Keşfet!</h2>
-            <p>Sende de dünyayı değiştirecek bir güç mü var? Akademiye katılarak potansiyelini zirveye taşıyabilirsin.</p>
-            <p><strong>Mülakat Adresi:</strong> Koordinat 45.9° Kuzey, Bilinmeyen Ada.</p>
-            <a href="index.html" class="buton">Ana Üsse Dön</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Süper Kahraman Akademisi | Gizlilik Derecesi: Çok Gizli</p>
-    </footer>
+<body class="academy-home academy-subpage application-page">
+  <div class="ambient-grid" aria-hidden="true"></div>
+  <header class="academy-header" id="top"><a class="academy-brand" href="index.html"><span class="brand-emblem">A</span><span>HERO<br><b>ACADEMY</b></span></a><nav aria-label="Akademi menüsü"><a href="index.html">ANA ÜS</a><a href="kadro.html">KAHRAMAN KADROSU</a><a class="nav-current" href="basvuru.html">EĞİTİM</a></nav><a class="header-apply" href="#application-form">BAŞVURU FORMU <span>↓</span></a></header>
+  <main>
+    <section class="application-hero"><div class="application-copy"><div class="mission-status"><span class="pulse-dot"></span> 2026 DÖNEMİ · BAŞVURULAR AÇIK</div><p class="hero-kicker">HER KAHRAMAN BİR YERDEN BAŞLAR</p><h1>Gücünü<br><em>keşfet.</em></h1><p class="hero-description">Doğuştan gelen yeteneğin yalnızca başlangıç. Akademide onu nasıl kullanacağını, takımına nasıl güveneceğini ve sorumluluk almayı öğren.</p><div class="application-facts"><div><span>01</span><p>Yetenek alanını<br>belirle</p></div><i></i><div><span>02</span><p>Aday dosyanı<br>oluştur</p></div><i></i><div><span>03</span><p>Eğitime<br>başla</p></div></div><div class="coordinates-card"><span class="coordinates-icon">⌖</span><div><small>GİZLİ MÜLAKAT NOKTASI</small><strong>45.9° Kuzey · Bilinmeyen Ada</strong><span>Konum bilgisi uygun adaylara iletilir.</span></div></div></div>
+      <section class="application-card" id="application-form" aria-labelledby="application-title"><div class="form-card-top"><span class="form-seal">A</span><span>ADAY DOSYASI <b>№ NEW</b></span><span class="file-status"><i></i> AÇIK</span></div><div class="form-heading"><span>GİZLİLİK DERECESİ · ADAY</span><h2 id="application-title">İlk adımını at.</h2><p>Bilgilerini gir, yetenek alanını seç. Bu form bir demo başvurusudur.</p></div><form id="academy-application" class="academy-application-form"><label for="candidate-name">KAHRAMAN ADI<input id="candidate-name" name="name" type="text" minlength="2" maxlength="40" autocomplete="name" placeholder="Adını yaz" required></label><label for="candidate-email">İLETİŞİM E-POSTASI<input id="candidate-email" name="email" type="email" autocomplete="email" placeholder="ornek@mail.com" required></label><label for="candidate-power">YETENEK ALANI<select id="candidate-power" name="power" required><option value="" disabled selected>Bir alan seç</option><option>Enerji kontrolü</option><option>Hız ve çeviklik</option><option>Zihin ve algı</option><option>Bilim ve teknoloji</option><option>Henüz keşfetmedim</option></select></label><label for="candidate-note">KENDİNİ KISACA TANIT<textarea id="candidate-note" name="note" rows="3" maxlength="220" placeholder="Seni farklı kılan nedir?"></textarea></label><button type="submit">ADAY DOSYASINI HAZIRLA <span>↗</span></button><p id="application-status" class="application-status" aria-live="polite">Demo formudur; bilgiler gönderilmez ve kaydedilmez.</p></form><div class="secure-note"><span>◇</span> ADAY BİLGİLERİ · YEREL DEMO · KAYIT YOK</div></section>
+    </section>
+    <section class="application-bottom"><span class="section-kicker">CESARETİNİ TOPLA</span><h2>Dünyanın sana<br><em>ihtiyacı var.</em></h2><a href="kadro.html">ÖNCE KAHRAMANLARLA TANIŞ <span>↗</span></a></section>
+  </main>
+  <footer class="academy-footer"><a class="academy-brand" href="index.html"><span class="brand-emblem">A</span><span>HERO<br><b>ACADEMY</b></span></a><span>© 2026 SÜPER KAHRAMAN AKADEMİSİ · ADAY DOSYASI</span><a href="#top">YUKARI DÖN ↑</a></footer>
+  <a class="project-home-return academy-return" href="../index.html" aria-label="Ana portfolyo sayfasına dön" title="Ana portfolyo sayfasına dön">⌂ <span>ANA SAYFA</span></a>
+  <script src="academy-pages.js"></script>
 </body>
 </html>
+
