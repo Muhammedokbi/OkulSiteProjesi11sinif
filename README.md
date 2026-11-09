@@ -1,171 +1,144 @@
-## 1.hafta Notu
+# 1. Hafta: Temel Kavramlar
 
-### 📌 TEMEL KAVRAMLAR
+## İnternetin temel yapı taşları
 
-#### 🌐 İnternet'in Temel Yapı Taşları
+- **IP adresi (Internet Protocol Address):** İnternete bağlı her cihazı (bilgisayar, sunucu, telefon vb.) tanımlayan, noktalama işaretleriyle ayrılmış benzersiz sayısal etikettir.
+- **DNS (Domain Name System):** İnsanların okuyabildiği alan adlarını (ör. `google.com`), bilgisayarların anladığı IP adreslerine çeviren internetin telefon rehberidir.
+- **Sunucu (Server):** Web sitelerini, dosyaları veya uygulamaları barındıran ve internet üzerinden gelen isteklere yanıt veren, sürekli çalışan güçlü bilgisayardır.
+- **HTTP (Hypertext Transfer Protocol):** Web tarayıcısı ile sunucu arasında web sayfası verilerinin nasıl aktarılacağını belirleyen temel iletişim kuralıdır.
+- **HTTPS (Hypertext Transfer Protocol Secure):** HTTP'nin, tarayıcı ile sunucu arasındaki veri iletişimini şifreleyerek güvenli hâle getiren sürümüdür.
 
-IP Adresi (Internet Protocol Address): İnternete bağlı her bir cihazı (bilgisayar, sunucu, telefon vb.) tanımlayan, noktalama işaretleriyle ayrılmış benzersiz sayısal etikettir.
-DNS (Domain Name System): İnsanların okuyabildiği alan adlarını (google.com gibi), bilgisayarların anladığı IP adreslerine çeviren internetin telefon rehberidir.
-Sunucu (Server): Web sitelerini, dosyaları veya uygulamaları barındıran ve internet üzerinden gelen isteklere yanıt veren, sürekli çalışan güçlü bilgisayardır.
-HTTP (Hypertext Transfer Protocol): Web tarayıcınız ile bir sunucu arasında web sayfası verilerinin nasıl aktarılacağını belirleyen temel iletişim kuralıdır.
-HTTPS (Hypertext Transfer Protocol Secure): HTTP'nin, tarayıcı ile sunucu arasındaki veri iletişimini şifreleyerek güvenli hale getiren sürümüdür.
-Web Sitesinin Adresi ve Konumu
-Domain (Alan Adı): Bir web sitesinin karmaşık IP adresi yerine kullanılan, akılda kalıcı ve kolay yazılabilen ismidir (örneğin, google.com).
-URL (Uniform Resource Locator): Bir web kaynağının (belirli bir sayfa, resim veya dosya) internetteki tam ve spesifik adresini gösteren metin dizesidir.
-WWW (World Wide Web): İnternet üzerinde barındırılan ve URL'ler aracılığıyla erişilebilen, birbirine bağlı web sayfaları ve içeriklerden oluşan küresel sistemdir.
-Hosting (Barındırma): Bir web sitesinin tüm dosya ve verilerinin, internet üzerinden 7/24 erişilebilir olmasını sağlayan bir sunucuda saklanması hizmetidir.
-FTP (File Transfer Protocol): Kendi bilgisayarınız ile bir sunucu arasında dosya yüklemek veya indirmek için kullanılan standart bir ağ protokolüdür.
-Web Sayfasının Yapısı ve Görünümü
-HTML (Hypertext Markup Language): Bir web sayfasının iskeletini, yani başlıklar, paragraflar, resimler gibi temel içeriğini ve yapısını oluşturan standart işaretleme dilidir.
-Etiket (Tag): HTML'de bir elementi (örneğin <p> bir paragraf etiketidir) tanımlamak için kullanılan, küçüktür ve büyüktür (< >) işaretleri arasındaki komutlardır.
-CSS (Cascading Style Sheets): HTML ile oluşturulmuş bir web sayfasının renk, yazı tipi, yerleşim gibi görsel stilini ve tasarımını belirlemek için kullanılan dildir.
-JavaScript (JS): Web sayfalarına tıklanabilir butonlar, animasyonlar veya form kontrolleri gibi interaktif özellikler ve dinamizm katan programlama dilidir.
-Web Geliştirici Rolleri ve Araçları
-Front-end (Ön Yüz): Bir web sitesinin kullanıcının tarayıcıda doğrudan gördüğü ve etkileşimde bulunduğu arayüz (tasarım) kısmını geliştiren alandır.
-Back-end (Arka Yüz): Bir web sitesinin veritabanı, sunucu işlemleri ve iş mantığı gibi kullanıcı tarafından görülmeyen arka plan sistemlerini geliştiren alandır.
-Full-stack (Tam Yığın): Bir web projesinin hem front-end (ön yüz) hem de back-end (arka yüz) geliştirmesini yapabilen uzmanlık alanıdır.
-Tarayıcı (Browser): Google Chrome, Firefox gibi, web sayfalarını görüntülememizi ve onlarla etkileşim kurmamızı sağlayan yazılımlardır.
-Editör (Kod Editörü): Web geliştiricilerin HTML, CSS gibi kodları yazmak, düzenlemek ve yönetmek için kullandığı özel metin düzenleme programıdır (Örn: VS Code).
-WYSIWYG Editör: Kod yazmadan, sürükle-bırak gibi görsel araçlarla web sayfası oluşturmayı sağlayan ve "Ne Görürsen Onu Alırsın" prensibiyle çalışan editörlerdir.
+## Web sitesinin adresi ve konumu
 
-#### 🏷️ En Yaygın Alan Adı Uzantıları
+- **Domain (alan adı):** Bir web sitesinin karmaşık IP adresi yerine kullanılan, akılda kalıcı ve kolay yazılabilen ismidir (ör. `google.com`).
+- **URL (Uniform Resource Locator):** Bir web kaynağının (belirli bir sayfa, resim veya dosya) internetteki tam ve belirli adresini gösteren metin dizisidir.
+- **WWW (World Wide Web):** İnternet üzerinde barındırılan ve URL'ler aracılığıyla erişilebilen, birbirine bağlı web sayfaları ve içeriklerden oluşan küresel sistemdir.
+- **Hosting (barındırma):** Bir web sitesinin tüm dosya ve verilerinin internet üzerinden 7/24 erişilebilir olmasını sağlayan sunucuda saklanması hizmetidir.
+- **FTP (File Transfer Protocol):** Bilgisayarınız ile sunucu arasında dosya yüklemek veya indirmek için kullanılan standart ağ protokolüdür.
 
-- **gov** (government): Devlet kurumları
-- **edu** (education): Eğitim kurumları
-- **k12** (kindergarten-12): Temel eğitim ve ortaöğretim kurumları
-- **org** (organization): Ticari olmayan kuruluşlar
-- **com** (commercial): Ticari kuruluşlar
-- **mil** (military): Askerî kurumlar
-- **net** (network): Ağ ve servis sunucuları
-- **ac** (academic): Akademik kuruluşlar
-- **int** (international): Uluslararası kuruluşlar
-- **info** (information): Bilgi içerikli web siteleri
-- **biz** (business): Ticari işletmeler
+## Web sayfasının yapısı ve görünümü
 
-## 2.hafta Notu
+- **HTML (Hypertext Markup Language):** Bir web sayfasının iskeletini; başlık, paragraf ve resim gibi temel içeriğini ve yapısını oluşturan standart işaretleme dilidir.
+- **Etiket (tag):** HTML'de bir elementi tanımlamak için kullanılan, küçüktür ve büyüktür işaretleri (`< >`) arasındaki ifadedir. Örneğin, `<p>` bir paragraf etiketidir.
+- **CSS (Cascading Style Sheets):** HTML ile oluşturulmuş bir web sayfasının renk, yazı tipi ve yerleşim gibi görsel stilini belirleyen dildir.
+- **JavaScript (JS):** Web sayfalarına tıklanabilir butonlar, animasyonlar ve form kontrolleri gibi etkileşimli özellikler kazandıran programlama dilidir.
 
-### 🎨 Web Sitesi Tasarım İlkeleri
+## Web geliştirici rolleri ve araçları
 
-- **📝 İçerik**: Sitenin kalbidir. Yazı, resim ve videoların özgün, doğru ve hedef kitleye uygun olmasıdır.
+- **Front-end (ön yüz):** Kullanıcının tarayıcıda doğrudan gördüğü ve etkileşimde bulunduğu arayüzü geliştirme alanıdır.
+- **Back-end (arka yüz):** Veritabanı, sunucu işlemleri ve iş mantığı gibi kullanıcı tarafından görülmeyen arka plan sistemlerini geliştirme alanıdır.
+- **Full-stack (tam yığın):** Bir web projesinin hem front-end hem de back-end geliştirmesini yapabilme uzmanlığıdır.
+- **Tarayıcı (browser):** Google Chrome ve Firefox gibi web sayfalarını görüntülememizi ve onlarla etkileşim kurmamızı sağlayan yazılımdır.
+- **Editör (kod editörü):** Web geliştiricilerin HTML ve CSS gibi kodları yazmak, düzenlemek ve yönetmek için kullandığı özel metin düzenleme programıdır (ör. VS Code).
+- **WYSIWYG editör:** Kod yazmadan, sürükle-bırak gibi görsel araçlarla web sayfası oluşturmayı sağlayan editördür. “Ne görürsen onu alırsın” prensibiyle çalışır.
 
-- **🎯 Tasarım (Layout)**: Logo, menü ve içeriklerin ekranda nereye, hangi düzende yerleşeceğinin planlanmasıdır.
+## Yaygın alan adı uzantıları
 
-- **🌈 Biçimsellik**: Renk uyumu, kontrast (zıtlık) ve okunabilir yazı tiplerinin (Tipografi) kullanılmasıdır.
+| Uzantı | Açıklama |
+|---|---|
+| `gov` (government) | Devlet kurumları |
+| `edu` (education) | Eğitim kurumları |
+| `k12` (kindergarten–12) | Temel eğitim ve ortaöğretim kurumları |
+| `org` (organization) | Ticari olmayan kuruluşlar |
+| `com` (company) | Ticari kuruluşlar |
+| `mil` (military) | Askerî kurumlar |
+| `net` (network) | Servis sunucuları |
+| `ac` (academic) | Akademik kuruluşlar |
+| `int` (international) | Uluslararası kuruluşlar |
+| `info` (information) | Bilgi içerikli web siteleri |
+| `biz` (business) | Ticari kuruluşlar |
 
-- **⚙️ İşlevsellik ve Kullanılabilirlik**: Sitenin hızlı yüklenmesi, menülerin ve butonların doğru çalışması, kullanıcı dostu (kolay gezinilebilir) olmasıdır.
+## Görev 2: Haftaya hazırlık uygulaması (ödev)
 
-- **📅 Güncellik**: Sitedeki haber, duyuru ve tarihlerin eski olmaması; modern teknolojiler (HTML5, CSS3) ile yapılmasıdır.
+Haftaya sitemizin içine oyunlar ve alt sayfalar ekleyeceğiz. Pratik yapmanız için sizden şunları istiyorum:
 
-- **✅ Uygunluk ve Güvenilirlik**: İletişim bilgilerinin olması, kırık (çalışmayan) link bulunmaması ve dil bilgisi hatalarının olmamasıdır.
+1. VS Code kullanarak üç yeni HTML dosyası oluşturun:
+   - `oyun1.html` — İçine `<h1>Taş Kağıt Makas</h1>` yazın.
+   - `oyun2.html` — İçine `<h1>Sayı Tahmin Oyunu</h1>` yazın.
+   - `oyun3.html` — İçine `<h1>Benim Oyunum</h1>` yazın.
+2. Bu üç dosyayı, bugün öğrendiğimiz Windows Dosya Gezgini ile FTP yöntemiyle sunucunuzdaki `htdocs` (veya `wwwroot`) klasörüne yükleyin.
 
-- **📱 Uyumluluk**: Sitenin hem farklı tarayıcılarda (Chrome, Safari vb.) hem de farklı cihazlarda (Mobil, Tablet, PC) bozulmadan çalışmasıdır (Responsive Tasarım / `<meta name="viewport"...>`).
+Haftaya derste `sitenizinadi.com/oyun1.html` adresini yazarak dosyalarınızın çalışıp çalışmadığını kontrol edeceğiz!
 
-## 3.hafta Notu
+# 2. Hafta: Web sitesi tasarım ilkeleri
 
-### 📄 HTML Yapı ve Semantik Etiketler
+Bu ilkeler sınavlarda kesinlikle karşınıza çıkacaktır. Defterinize yazın:
 
-#### 🔧 Temel HTML Etiketleri
+- **İçerik:** Sitenin kalbidir. Yazı, resim ve videolar özgün, doğru ve hedef kitleye uygun olmalıdır.
+- **Tasarım (layout):** Logo, menü ve içeriklerin ekranda nereye ve hangi düzende yerleştirileceğinin planlanmasıdır.
+- **Biçimsellik:** Renk uyumu, kontrast (zıtlık) ve okunabilir yazı tiplerinin (tipografi) kullanılmasıdır.
+- **İşlevsellik ve kullanılabilirlik:** Sitenin hızlı yüklenmesi, menülerin ve butonların doğru çalışması ve kullanıcı dostu (kolay gezinilebilir) olmasıdır.
+- **Güncellik:** Sitedeki haber, duyuru ve tarihlerin güncel olması; sitenin modern teknolojilerle (HTML5, CSS3) yapılmasıdır.
+- **Uygunluk ve güvenilirlik:** İletişim bilgilerinin bulunması, kırık (çalışmayan) bağlantı olmaması ve dil bilgisi hatalarının bulunmamasıdır.
+- **Uyumluluk:** Sitenin farklı tarayıcılarda (Chrome, Safari vb.) ve cihazlarda (mobil, tablet, bilgisayar) bozulmadan çalışmasıdır. Buna duyarlı tasarım (responsive design) denir. `<meta name="viewport" ...>` etiketi kullanılır.
 
-- **`<!DOCTYPE html>`**: Tarayıcıya HTML5 standartlarını kullandığımızı belirten zorunlu koddur.
+# 3. Hafta: HTML5 özellikleri
 
-- **`<meta name="viewport"...>`**: Sitenin cep telefonlarında ve tabletlerde bozulmadan, ekrana duyarlı (Responsive) çalışmasını sağlayan etikettir.
+Aşağıdaki HTML5 özelliklerini defterinize çizin ve yazın:
 
-#### 📑 Başlık Hiyerarşisi Kuralları
+- `<!DOCTYPE html>`: Tarayıcıya HTML5 standartlarını kullandığımızı belirten zorunlu bildiridir.
+- `<meta name="viewport" ...>`: Sitenin cep telefonlarında ve tabletlerde bozulmadan, ekrana duyarlı (responsive) çalışmasını sağlar.
 
-1. Bir sayfada sadece **bir tane** `<h1>` (Ana Başlık) kullanılır.
-2. Sıralama atlanamaz. ❌ _Örn: `<h2>`'den sonra `<h4>` yazılamaz, `<h3>` gelmelidir._
-3. Başlık etiketleri yazıyı büyütmek için değil, sayfanın içindekiler tablosunu oluşturmak içindir. Yazı büyütme işi **CSS** ile yapılır.
+## Başlık hiyerarşisi
 
-#### 🏗️ Anlamsal (Semantic) Etiketler **⭐ Çok Önemli**
+- Bir sayfada yalnızca bir tane `<h1>` (ana başlık) kullanılır.
+- Başlık sıralaması atlanamaz. Örneğin, `<h2>`'den sonra `<h4>` yazılamaz; `<h3>` gelmelidir.
+- Başlık etiketleri yazıyı büyütmek için değil, sayfanın içindekiler yapısını oluşturmak için kullanılır. Yazı boyutu CSS ile ayarlanır.
 
-- **`<header>`**: Başlık ve Logo alanı
-- **`<nav>`**: Menü (Link) alanı
-- **`<main>`**: Sitenin ana içeriği
-- **`<article>`**: Bağımsız makale/haber bloğu
-- **`<section>`**: İçerik içindeki alt bölümler
-- **`<aside>`**: Ana içeriğin yanında duran yan bilgiler (Kenar çubuğu)
-- **`<footer>`**: En alt kısımdaki telif/iletişim alanı
+## Anlamsal (semantic) etiketler — çok önemli
 
-#### ✍️ Anlamsal Metin Biçimlendirme
+- `<header>`: Başlık ve logo alanı.
+- `<nav>`: Menü (bağlantı) alanı.
+- `<main>`: Sitenin ana içeriği.
+- `<article>`: Bağımsız makale veya haber bölümü.
+- `<section>`: İçerik içindeki alt bölümler.
+- `<aside>`: Ana içeriğin yanında bulunan yan bilgiler (kenar çubuğu).
+- `<footer>`: Sayfanın en altındaki telif ve iletişim alanı.
 
-- **`<strong>`**: Kalın yapar ama arama motoruna "bu kelime çok önemli" der.
-- **`<em>`**: İtalik yapar ama "bu kelimeye vurgu yap" der.
-- **`<!-- Yorum -->`**: Tarayıcıda görünmeyen, sadece kodlayıcının gördüğü notlardır.
+## Anlamsal metin biçimlendirme
 
-## 4.hafta Notu
+- `<strong>`: Metni kalın gösterir ve arama motorlarına bu kelimenin önemli olduğunu belirtir.
+- `<em>`: Metni italik gösterir ve vurgulanması gerektiğini belirtir.
+- `<!-- Yorum -->`: Tarayıcıda görünmeyen, yalnızca kodlayıcının gördüğü nottur.
 
-### 🎭 CSS Seçiciler (Selectors)
+# 4. Hafta: CSS seçicileri
 
-#### 1️⃣ Etiket Seçici (Tag Selector)
+Aşağıdaki CSS seçicilerini ve ne işe yaradıklarını defterinize not alın:
 
-```css
-body {
-}
-h1 {
-}
-```
+- **Etiket seçici (`body`, `h1`):** HTML etiketinin adıyla doğrudan seçim yapar ve sayfadaki o etikete sahip tüm öğeleri etkiler.
+- **Kimlik (ID) seçici (`#logo`):** HTML'de `id="logo"` olan öğeyi seçer. Bir sayfada bir ID yalnızca bir kez kullanılır. Başına `#` konur.
+- **Sınıf (class) seçici (`.gezegen-karti`):** HTML'de `class="gezegen-karti"` olan öğeleri seçer. Birden fazla öğede kullanılabilir. Başına `.` konur.
+- **Torun (descendant) seçici (`.gezegen-karti img`):** Seçiciler arasında boşluk bırakılarak yazılır. Bir kutunun içindeki, ne kadar derinde olursa olsun, eşleşen öğeleri seçer.
+- **Sözde sınıf (pseudo-class) (`:hover`):** Kullanıcı fareyi bir öğenin üzerine getirdiğinde uygulanacak stili belirler.
+- **Sözde eleman (pseudo-element) (`::first-letter`, `::selection`):** Öğenin belirli bir parçasını (ilk harfini veya fareyle seçilen kısmını) hedef alır. Çift iki nokta (`::`) ile yazılır.
 
-- HTML etiketinin adıyla doğrudan seçer.
-- Sayfadaki **tüm** o etiketleri etkiler.
+# 5. Hafta: JavaScript
 
-#### 2️⃣ Kimlik Seçici (ID Selector) - `#`
+- **JavaScript nedir?** Web sayfalarına mantık, karar verme yeteneği ve kullanıcıyla etkileşim kazandıran programlama dilidir.
+- **DOM (Document Object Model):** JavaScript'in HTML etiketlerine müdahale edebilmesi için oluşturulan ağaç yapısıdır. `document.getElementById("Kutu")` kodu, HTML'deki `id` değeri `Kutu` olan öğeyi bulmamızı sağlar.
+- **`var` / `let` (değişkenler):** Bilgisayarın geçici hafızasında sayı veya metin gibi verileri saklayan kutulardır.
+- **`if` / `else`:** Karar yapısıdır. Şart doğruysa (`if`) bir kodu, yanlışsa (`else`) başka bir kodu çalıştırır.
+- **`switch` / `case`:** Bir değişkenin alabileceği çok sayıda seçenek varsa `if` / `else` yerine daha düzenli bir yapı sunar. İşlem bitince `break;` ile çıkılır.
+- **`return`:** Bir fonksiyonun görevini bitirdikten sonra kendisini çağıran yere bir değer döndürmesidir.
 
-```css
-#logo {
-}
-```
+# 6. Hafta
 
-- HTML'de `id="logo"` olan elemanı seçer.
-- Bir sayfada bir ID **sadece 1 kez** kullanılır.
-- Başına `#` (hash) konur.
+Deftere yazma yok.
 
-#### 3️⃣ Sınıf Seçici (Class Selector) - `.`
+# 7. Hafta
 
-```css
-.gezegen-karti {
-}
-```
+Deftere yazma yok.
 
-- HTML'de `class="gezegen-karti"` olan elemanları seçer.
-- **Birden fazla** elemanda kullanılabilir.
-- Başına `.` (nokta) konur.
+# 8. Hafta
 
-#### 4️⃣ Torun Seçici (Descendant Selector)
+- **`<a>` etiketi ve `target` özelliği:** `target="_blank"` bağlantıyı yeni sekmede, `target="_self"` (varsayılan) aynı sekmede açar. `href="#id"` sayfa içi bağlantı kurar; `href="mailto:..."` e-posta göndermek için kullanılır.
+- **`<fieldset>` ve `<legend>`:** `<fieldset>` form elemanlarını mantıksal gruplara ayırıp etraflarına çerçeve çizer. `<legend>` bu çerçevenin başlığını oluşturur.
+- **`<optgroup>` ve `<datalist>`:** `<optgroup>`, açılır liste (`<select>`) seçeneklerini kategorilere ayırır. `<datalist>` ise bir `<input>` kutusuna otomatik tamamlama önerileri bağlar.
+- **`<meter>` ve `<progress>`:** `<meter>`, bilinen bir aralıktaki ölçümü (disk doluluğu, bütçe riski veya sınav puanı gibi) gösterir. `<progress>` ise bir işlemin ilerleme durumunu (ör. %50 yüklendi) gösterir.
 
-```css
-.gezegen-karti img {
-}
-```
+# 9. Hafta
 
-- Aralarında **boşluk** bırakılarak yazılır.
-- Bir kutunun içindeki (ne kadar derinde olursa olsun) elemanları seçer.
-
-#### 5️⃣ Sözde Sınıf (Pseudo-Class) - `:`
-
-```css
-a:hover {
-}
-input:focus {
-}
-```
-
-- Kullanıcı fare ile elemanın üzerine geldiği anki stilini belirler.
-- **Tek iki nokta** `:` ile yazılır.
-
-#### 6️⃣ Sözde Eleman (Pseudo-Element) - `::`
-
-```css
-p::first-letter {
-}
-::selection {
-}
-```
-
-- Elemanın sadece belirli bir parçasını (ilk harfini veya fareyle seçilen kısmını) hedef alır.
-- **Çift iki nokta** `::` ile yazılır.
-
-## 🔗 Bağlantılar
-
-- **👤 Ana Profil**: [Muhammedokbi](https://github.com/Muhammedokbi)
-- **📦 Proje Reposu**: [OkulSiteProjesi11sinif](https://github.com/Muhammedokbi/OkulSiteProjesi11sinif)
-- **🌐 Web Sitesi**: [okbi.lovestoblog.com](https://okbi.lovestoblog.com/)
+- **Sözde sınıf seçiciler (`:hover`, `:focus`, `:active`):** `:hover` fareyle öğenin üzerine gelindiğinde, `:active` fareyle basılı tutulduğunda, `:focus` ise bir `<input>` kutusuna tıklanıp veri girişi yapıldığında uygulanacak stili belirler.
+- **Sözde eleman seçiciler (`::first-letter`, `::before`, `::after`, `::selection`):** Elemanın ilk harfini, öncesini, sonrasını veya fareyle seçilen metin alanını biçimlendirir.
+- **Kutu modeli (Box Model):** Her HTML elemanı bir kutudur. İçten dışa doğru `content` (içerik), `padding` (iç boşluk), `border` (kenarlık) ve `margin` (dış boşluk) katmanlarından oluşur.
+- **Pozisyon ayarları (`position`):** `relative`, elemanı normal konumuna göre kaydırır ve içindeki `absolute` elemanlar için kapsayıcı (referans) olur. `fixed`, elemanı ekrana sabitler; sayfa kaydırılsa da eleman hareket etmez. `z-index`, üst üste gelen elemanlardan hangisinin önde duracağını belirler.
